@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+body{
+    height: 90vh;
+    width: auto;
+    background-color: #403c44;
+    font-family: 'Cabin', sans-serif;
+    color: #fff;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+section{
+    height: max-content;
+    width: auto;
+}
+
+.about{
+    background-color:  #504c54;
+    height: 88vh;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    top: 30px;
+    padding: 2%;
+}
+.botImage{
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100px);
+}
+
+
+.botImage img {
+    height: auto;
+    width: clamp(150px, 20vw, 50vw);
+    filter: drop-shadow(0px 5px 5px black);
+    animation: levitar 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes levitar {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(20px);}
+}
+
+.textAbout{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    gap: 5vh;
+    margin: 2%;
+    justify-content: center;
+    transform: translateY(-100px);
+}
+
+.textAbout h1{
+    font-size: clamp(40px, 5vw, 100px);
+    color: #ffbc3c;
+}
+
+.description{
+    font-size: clamp(20px, 2vw, 24px);
+    color: #d3be97;
+    text-wrap: pretty;
+    line-height: 1.5;
+}
+
+.textAbout .botao {
+    display: flex;
+    width: fit-content;
+}
+
+a{
+    text-decoration: none;
+    color: inherit; 
+}
+
+.botaoText{
+    cursor: pointer;
+    background-color: #ffbc3c;
+    height: 8vh;
+    padding:1% 5% 1% 5%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(20px, 3vw, 26px);
+    transition: all 0.2s ease;
+    text-wrap: nowrap;
+}
+
+.textAbout .botao:hover > .botaoText{
+    scale: 1.1;
+    filter: brightness(1.1);
+}
+
+.commands {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10vh;
+    background-color: #403c44;
+}
+
+.command{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    padding: 1% 0 1% 0;
+}
+
+.reverse-row{
+    flex-direction: row-reverse;
+}
+
+.howToCommand{
+    height: auto;
+    width: 50%;
+    margin: 0 0% 0 2%;
+}
+
+.title {
+    color: #ffbc3c;
+    font-size: clamp(24px, 5vw, 40px);
+}
+
+.codeDescription{
+    color: #d3be97;
+    width: 80%;
+    font-size: clamp(16px, 2vw, 20px);
+}
+
+.picExample{
+    height: auto;
+    width: 50%;
+    margin: 0 2% 0 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.picExample img{
+    width: clamp(200px, 25vw, 50vw);
+    height: auto;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 740px) {
+    .botImage{
+        display: none;
+        width: 0;
+    }
+
+    .textAbout{
+        width: max-content;
+        transform: translateY(0px);
+    }
+
+    .description {
+        width: fit-content;
+    }
+}

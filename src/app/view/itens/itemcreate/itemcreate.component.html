@@ -1,0 +1,44 @@
+<body>
+    <section class="forms">
+        <div class="allForm">
+            <form class="formItens" (ngSubmit)="cadastro()" [formGroup]="itemForm" #formDir="ngForm">
+                <h1 class="title">CRIAR COMANDO</h1>
+                <div class="formTop">
+
+                    <div class="form-group">
+                        <div class="input">
+                            <input type="text" id="nome" placeholder="Insira o titulo do comando" formControlName="nome" required/>
+                            <p *ngIf="isInvalidControl('nome')">Erro no nome</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input">
+                            <input type="text" id="descricao" placeholder="Insira a descrição do comando" formControlName="descricao" required/>
+                            <p *ngIf="isInvalidControl('descricao')">Erro na descrição</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottomAll">
+                    <div class="formBottom">
+                        <div class="form-group">
+                            <div class="input imageInput">
+                                <input class="img" type="file" id="imagem" formControlName="imagem" accept="image/*" (change)="uploadFile($event)">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input">
+                                <input class="alt" type="text" id="alt" placeholder="Insira o texto alternativo" formControlName="alt" required/>
+                                <p *ngIf="isInvalidControl('alt')">Erro no texto alternativo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="">
+                        <img class="preImage" [src]="">
+                        <p>imagem true</p>
+                    </div>
+                </div>
+                <button class="sendButton" type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+</body>

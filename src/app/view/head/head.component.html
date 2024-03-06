@@ -1,0 +1,21 @@
+<body>
+    <nav>
+        <div class="picstart">
+            <a (click)="goBack()" class="pic">
+                <img src="https://cdn-icons-png.flaticon.com/512/190/190544.png" alt="CodeBucket image">
+            </a>
+        </div>
+        <div class="itens">
+            <a href="https://discord.com/api/oauth2/authorize?client_id=1193011045577523300&permissions=30781981326583&scope=bot+applications.commands" target="_blank" class="invite">
+                Add to Discord
+            </a>                
+        </div>
+        <div class="algo dropdown" *ngIf="isLoggedIn()">
+            <img class="dropbtn" src="https://cdn-icons-png.flaticon.com/512/2906/2906274.png" alt="Manager">
+            <div class="dropdown-content">
+                <a (click)="goToWebmanager()">Web Manager</a>
+                <a (click)="goToItens()">Comandos</a>
+              </div>
+        </div>
+    </nav>
+</body>

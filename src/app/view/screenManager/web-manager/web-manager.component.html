@@ -1,0 +1,18 @@
+<body>
+    <section class="all">
+        <div class="head container">
+            <h1>HEADER</h1>
+            <img src="">
+        </div>
+        <div class="home container" *ngFor="let home of this.homes; let i = index">
+            <div (click)="goToHomeEdit(home)">
+                <H1>HOME PAGE</H1>
+                <img src="">
+            </div>
+        </div>
+        <div class="foot container">
+            <H1>FOOTER</H1>
+            <img src="">
+        </div>
+    </section>
+</body>

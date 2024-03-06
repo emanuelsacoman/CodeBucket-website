@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+body{
+    height: 90vh;
+    width: auto;
+    background-color: #504c54;
+    font-family: 'Cabin', sans-serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.commandsList{
+    background-color: #403c44;
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    border-radius: 10px;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: 0.5%;
+    border-radius: 10px;
+    border-bottom: 0.5px dotted #504c54;
+}
+
+.item:hover{
+    background-color: #47424b;
+    scale: 1.005;
+}
+
+.values{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 1%;
+    font-size: clamp(12px, 2vw, 20px);
+}
+
+.values img {
+    width: clamp(50px, 20vw, 100px);
+    height: auto;
+}
+
+.values img:hover {
+    scale: 1.1;
+}
+
+.button{
+    position: static;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+}
+
+.button img {
+    width: clamp(50px, 20vw, 90px);
+    height: auto;
+    margin: 1%;
+    transition: all 0.05s ease-in-out;
+}
+
+.button img:hover{
+    scale: 1.05;
+    filter: brightness(1.1);
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    font-size: clamp(22px, 5vw, 30px);
+    color: #ffbc3c;
+}
+
+.separatedItens{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+    .separatedItens{
+        flex-direction: column;
+    }
+}

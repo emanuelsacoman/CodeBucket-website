@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color:  #504c54;
+    color: #fff;
+    font-family: 'Cabin', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+}
+
+input{
+    background-color: #fff;
+}
+
+.all {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    font-size: clamp(24px, 5vw, 36px);
+    color: #ffbc3c;
+}
+
+.form {
+    height: fit-content;
+    width: fit-content;
+    padding: 2%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #403c44;
+}
+
+.item {
+    width: 40vw;
+    height: 4vh;
+    font-size: clamp(15px, 2vw, 24px); 
+}
+
+.sendButton {
+    width: 20vw;
+    min-width: fit-content;
+    height: auto;
+    font-size: clamp(15px, 2vw, 24px);
+    background-color: #fff;
+}
+
+.sendButton:active{
+    background-color: #fff6e6;
+}
+
+p, .alert {
+    color: red;
+    font-size: clamp(12px, 2vw, 20px);
+}
+
+.formTrue{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group{
+    display: flex;
+    align-items: center;
+    background-color: #343137;
+    height: 100%;
+}
+
+.picSpace {
+    width: clamp(10px, 5vw, 30px);; 
+    height: auto;
+}
+
+.pic {
+    width: 90%;
+    height: auto;
+    max-width: 100%;
+    display: block; 
+    margin: 0 auto; 
+}
+
+@media screen and (max-width: 570px) {
+    .picSpace{
+        display: none;
+    }
+
+    .item {
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .item {
+        width: 80vw;
+    }
+}

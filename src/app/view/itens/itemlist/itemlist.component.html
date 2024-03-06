@@ -1,0 +1,22 @@
+<body>
+    <section class="commandsList">
+        <header>
+            <p class="titulo">LISTA DE ITENS</p>
+        </header>
+        <div class="item" *ngFor="let comando of this.comandos; let i = index">
+            <div class="values" (click)="editar(comando)">
+                <div class="separatedItens">
+                    <p>{{comando.nome}}</p>
+                    <p>{{comando.descricao}}</p>
+                </div>
+                <div class="separatedItens">
+                    <img [src]="comando.imgUrl" alt="{{comando.alt}}">
+                    <p>{{comando.alt}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="button">
+        <img (click)="irParaCadastro()" src="https://static-00.iconduck.com/assets.00/plus-icon-1024x1024-jdaf40nu.png" alt="Botão para add">
+    </div>
+</body>
