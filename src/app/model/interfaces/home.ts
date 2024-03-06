@@ -4,13 +4,15 @@ export class Home {
     private _description!: string;
     private _botImg!: any;
     private _alt!: string;
+    private _link!: string;
 
-    constructor(id: string, title: string, description: string, botImg: any, alt: string) {
+    constructor(id: string, title: string, description: string, botImg: any, alt: string, link: string) {
         this._id = id;
         this._title = title;
         this._description = description;
         this._alt = alt;
         this._botImg = botImg;
+        this._link = link;
     }
 
     get id(): string {
@@ -52,4 +54,13 @@ export class Home {
     public set alt(value: string) {
         this._alt = value;
     }
+
+    public get link(): string {
+        return this._link;
+    }
+
+    public set link(value: string) {
+        this._link = value;
+    }
+    
 }

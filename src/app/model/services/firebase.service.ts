@@ -11,9 +11,14 @@ import { Home } from '../interfaces/home';
 export class FirebaseService {
   private PATH : string = "Itens";
   private PATH2 : string = "Home";
+  private PATH3 : string = "Head";
+  private PATH4 : string = "Footer";
+  private PATH5 : string = "Outro";
 
   constructor(private firestore: AngularFirestore,
     private storage: AngularFireStorage) { }
+
+    //comandos
 
     obterTodos() {
       return this.firestore.collection(this.PATH).snapshotChanges();
@@ -67,6 +72,7 @@ export class FirebaseService {
       return this.firestore.collection(this.PATH).doc(id).delete();
     }  
 
+    //comandos
 
     //home
     
@@ -75,7 +81,8 @@ export class FirebaseService {
         title: home.title,
         description: home.description,
         botImg: home.botImg,
-        alt: home.alt
+        alt: home.alt,
+        link: home.link
       });
     }
     
@@ -105,4 +112,24 @@ export class FirebaseService {
     obterTodosHome() {
       return this.firestore.collection(this.PATH2).snapshotChanges();
     }
+
+    //home
+
+    //head
+
+
+
+    //head
+
+    //footer
+
+
+
+    //footer
+
+    //outro
+
+    
+
+    //outro
 }

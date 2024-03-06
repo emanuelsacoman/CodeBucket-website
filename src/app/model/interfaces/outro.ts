@@ -1,4 +1,4 @@
-export class Header{
+export class Outro{
     private _id!: string;
 
     constructor(){

@@ -32,7 +32,7 @@ body{
 }
 
 .container:hover h1{
-    filter: brightness(100%);
+    filter: brightness(110%);
 }
 
 .home{

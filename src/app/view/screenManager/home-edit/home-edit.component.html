@@ -13,7 +13,7 @@
                     </div>
                     <div class="form-group">
                         <div class="input">
-                            <input type="text" id="description" placeholder="Insira a descrição da página" formControlName="description" required/>
+                            <textarea type="text" id="description" placeholder="Insira a descrição da página" formControlName="description" required rows="5" cols="30"></textarea>
                             <p *ngIf="isInvalidControl('description')">Erro na descrição</p>
                         </div>
                     </div>
@@ -24,9 +24,6 @@
                             <div class="input imageInput">
                                 <input class="img" type="file" id="imagem" formControlName="imagem" accept="image/*" (change)="uploadFile($event)">
                             </div>
-                            <div *ngIf="!imagem">
-                                <img class="preImage" [src]="this.home.botImg" />
-                            </div>
                         </div>
                         <div class="form-group">
                             <div class="input">
@@ -34,10 +31,15 @@
                                 <p *ngIf="isInvalidControl('alt')">Erro no texto alternativo</p>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <div class="input">
+                                <input class="link" type="text" id="link" placeholder="Insira o link do bot" formControlName="link" required/>
+                                <p *ngIf="isInvalidControl('link')">Erro no link</p>
+                            </div>
+                        </div>
                     </div>
-                    <div *ngIf="">
-                        <img class="preImage" [src]="">
-                        <p>imagem true</p>
+                    <div *ngIf="!imagem">
+                        <img class="preImage" [src]="this.home.botImg" />
                     </div>
                 </div>
                 <button class="sendButton" type="submit">Enviar</button>

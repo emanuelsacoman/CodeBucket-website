@@ -17,6 +17,7 @@ export class HomeEditComponent {
   title! : string;
   description! : string;
   alt! : string;
+  link! : string;
 
   constructor(private router: Router,
     private formBuilder: FormBuilder,
@@ -31,11 +32,13 @@ export class HomeEditComponent {
     this.title = this.home?.title;
     this.description = this.home?.description;
     this.alt = this.home?.alt;
+    this.link = this.home?.link;
 
     this.homeEdit = this.formBuilder.group({
       title: [this.title, [Validators.required]],
       description: [this.description, [Validators.required]],
       alt: [this.alt, [Validators.required]],
+      link: [this.link, [Validators.required]],
       imagem: [null],
     });
   }

@@ -73,12 +73,14 @@ button:active{
     background-color: #fff6e6;
 }
 
-input{
+input, textarea{
     background-color: #ffffff;
     width: 100%;
     height: clamp(fit-content, 4vh, 60px);
     border-radius: 3px;
     font-size: clamp(15px, 2vw, 24px); 
+    font-family: 'Cabin', sans-serif;
+    resize: none;
 }
 
 .imageBottom{

@@ -1,26 +1,24 @@
 <body>
     <main>
-        <section class="about">
-            <article class="textAbout">
-                <h1>CodeBucket</h1>
+        <section class="about" *ngFor="let home of this.homes; let i = index">
+            <article class="textAbout" >
+                <h1>{{home.title}}</h1>
                 <p class="description">
-                    Melhore seu servidor do Discord com esse ótimo bot, 
-                    capaz de auxíliar usuários a aprenderem a programar, transformando a plataforma Discord em um ambiente de estudos. 
-                    O que você está esperando? Junte-se a nós!
+                    {{home.description}}
                 </p>
                 <div class="botao">
-                    <a href="https://discord.com/api/oauth2/authorize?client_id=1193011045577523300&permissions=30781981326583&scope=bot+applications.commands" target="_blank" class="botaoText">
+                    <a href="{{home.link}}" target="_blank" class="botaoText">
                         Add to Discord
                     </a>                    
                 </div>
             </article>
             <article class="botImage">
-                <img src="https://cdn-icons-png.flaticon.com/512/190/190544.png" alt="CodeBucket image">
+                <img src="{{home.botImg}}" alt="{{home.alt}}">
             </article>
         </section>
 
         <section class="commands">        
-            <article class="command" *ngFor="let item of this.comandos;; let i = index" [ngClass]="{'reverse-row': i % 2 != 0}">
+            <article class="command" *ngFor="let item of this.comandos; let i = index" [ngClass]="{'reverse-row': i % 2 != 0}">
             <div class="howToCommand">
                 <h1 class="title">
                 <p>{{ item.nome }}</p>
