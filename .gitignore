@@ -1,0 +1,41 @@
+# Arquivos de configuração específicos do ambiente
+.env
+
+# Arquivos de log ou de saída de depuração
+*.log
+*.log.*
+*.out
+*.err
+*.dump
+
+# Pastas de build ou de compilação
+/build
+/dist
+/obj
+
+# Arquivos temporários ou de cache
+*.tmp
+*.temp
+*.bak
+*.old
+
+# Arquivos de backup ou de cópia de segurança
+*.backup
+
+# Arquivos de sistema operacional ou de IDE
+.DS_Store
+.idea
+*.sublime-workspace
+*.suo
+
+# Pastas de node_modules
+node_modules/
+!node_modules/*
+
+# Pastas de environments
+environments/
+!environments/*
+
+# Arquivos e pastas ocultos
+.*/
+*/.*/
