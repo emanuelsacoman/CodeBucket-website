@@ -1,19 +1,19 @@
 <body>
     <main>
-        <section class="about" *ngFor="let home of this.homes; let i = index">
+        <section class="about">
             <article class="textAbout" >
-                <h1>{{home.title}}</h1>
-                <p class="description">
+                <h1 *ngFor="let home of this.homes;">{{home.title}}</h1>
+                <p class="description" *ngFor="let home of this.homes;">
                     {{home.description}}
                 </p>
-                <div class="botao">
-                    <a href="{{home.link}}" target="_blank" class="botaoText">
+                <div class="botao" *ngFor="let outros of this.outros;">
+                    <a href="{{outros.link}}" target="_blank" class="botaoText">
                         Add to Discord
                     </a>                    
                 </div>
             </article>
-            <article class="botImage">
-                <img src="{{home.botImg}}" alt="{{home.alt}}">
+            <article class="botImage"  *ngFor="let outros of this.outros;">
+                <img src="{{outros.botImg}}" alt="{{outros.alt}}">
             </article>
         </section>
 

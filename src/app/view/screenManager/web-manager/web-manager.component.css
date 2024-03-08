@@ -35,11 +35,7 @@ body{
     filter: brightness(110%);
 }
 
-.home{
-    height: 45%;
-}
-
 h1{
-    font-size: 5vw;
+    font-size: clamp(40px, 5vw, 100px);
     color: #504c54;
 }

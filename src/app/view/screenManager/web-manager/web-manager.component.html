@@ -9,5 +9,8 @@
         <div class="foot container">
             <H1>FOOTER</H1>
         </div>
+        <div class="outro container" *ngFor="let outro of this.outros; let j = index" (click)="goToOutroEdit(outro)">
+            <H1>OUTRO</H1>
+        </div>
     </section>
 </body>

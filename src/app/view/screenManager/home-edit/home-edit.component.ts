@@ -31,40 +31,22 @@ export class HomeEditComponent {
 
     this.title = this.home?.title;
     this.description = this.home?.description;
-    this.alt = this.home?.alt;
-    this.link = this.home?.link;
 
     this.homeEdit = this.formBuilder.group({
       title: [this.title, [Validators.required]],
-      description: [this.description, [Validators.required]],
-      alt: [this.alt, [Validators.required]],
-      link: [this.link, [Validators.required]],
-      imagem: [null],
+      description: [this.description, [Validators.required]]
     });
   }
 
   editItem() {
     if (this.homeEdit.valid){
-      const new_part: Home = {...this.homeEdit.value,id: this.home.id,botImg: this.home.botImg};
-
-      if (this.imagem) {
-        this.firebase.uploadImageHome(this.imagem, new_part)?.then(() =>{
-          this.router.navigate(['/webmanager'])
-        });
-      }else{
-        new_part.botImg = this.home.botImg;
-
+      const new_part: Home = {...this.homeEdit.value,id: this.home.id};
         this.firebase.editarHome(new_part, this.home.id).then(() => this.router.navigate(['/webmanager'])).catch((error) =>{
           console.log(error);
         });
-      }
-    }else{
+      }else{
       window.alert('Campos obrigatorios!');
     }
-  }
-
-  uploadFile(event: any){
-    this.imagem = event.target.files;
   }
 
   isInvalidControl(controlName: string) {

@@ -18,30 +18,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="bottomAll">
-                    <div class="formBottom">
-                        <div class="form-group">
-                            <div class="input imageInput">
-                                <input class="img" type="file" id="imagem" formControlName="imagem" accept="image/*" (change)="uploadFile($event)">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input">
-                                <input class="alt" type="text" id="alt" placeholder="Insira o texto alternativo" formControlName="alt" required/>
-                                <p *ngIf="isInvalidControl('alt')">Erro no texto alternativo</p>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input">
-                                <input class="link" type="text" id="link" placeholder="Insira o link do bot" formControlName="link" required/>
-                                <p *ngIf="isInvalidControl('link')">Erro no link</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div *ngIf="!imagem">
-                        <img class="preImage" [src]="this.home.botImg" />
-                    </div>
-                </div>
                 <button class="sendButton" type="submit">Enviar</button>
             </form>
         </div>

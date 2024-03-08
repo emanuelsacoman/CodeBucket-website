@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Command } from 'src/app/model/interfaces/command';
 import { Home } from 'src/app/model/interfaces/home';
+import { Outro } from 'src/app/model/interfaces/outro';
 import { FirebaseService } from 'src/app/model/services/firebase.service';
 
 @Component({
@@ -12,6 +13,7 @@ import { FirebaseService } from 'src/app/model/services/firebase.service';
 export class IndexComponent {
   public comandos: Command[] = [];
   public homes: Home[] = [];
+  public outros : Outro[] = [];
 
   constructor(private router: Router,
     private firebaseService: FirebaseService){
@@ -32,5 +34,16 @@ export class IndexComponent {
           } as Home;
         });
       });
-  }
+
+      this.firebaseService.obterTodosOutro().subscribe((res) => {
+        this.outros = res.map((outro) => {
+          return {
+            id: outro.payload.doc.id,
+            ...(outro.payload.doc.data() as any),
+          } as Outro;
+        });
+      });
+
+      
+    }
 }

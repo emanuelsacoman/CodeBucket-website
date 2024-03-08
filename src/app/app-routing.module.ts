@@ -10,6 +10,7 @@ import { WebManagerComponent } from './view/screenManager/web-manager/web-manage
 import { FooterEditComponent } from './view/screenManager/footer-edit/footer-edit.component';
 import { HeaderEditComponent } from './view/screenManager/header-edit/header-edit.component';
 import { HomeEditComponent } from './view/screenManager/home-edit/home-edit.component';
+import { OutroEditComponent } from './view/screenManager/outro-edit/outro-edit.component';
 
 const routes: Routes = [
   {
@@ -53,6 +54,11 @@ const routes: Routes = [
   {
     path: 'homeedit',
     component: HomeEditComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'outro',
+    component: OutroEditComponent,
     canActivate: [AuthGuard],
   },
 ];

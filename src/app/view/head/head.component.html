@@ -1,12 +1,12 @@
 <body>
     <nav>
         <div class="picstart">
-            <a (click)="goBack()" class="pic">
-                <img src="https://cdn-icons-png.flaticon.com/512/190/190544.png" alt="CodeBucket image">
+            <a (click)="goBack()" class="pic" *ngFor="let outros of this.outros;">
+                <img src="{{outros.botImg}}" alt="{{outros.alt}}">
             </a>
         </div>
-        <div class="itens">
-            <a href="https://discord.com/api/oauth2/authorize?client_id=1193011045577523300&permissions=30781981326583&scope=bot+applications.commands" target="_blank" class="invite">
+        <div class="itens" *ngFor="let outros of this.outros;">
+            <a href="{{outros.link}}" target="_blank" class="invite">
                 Add to Discord
             </a>                
         </div>
