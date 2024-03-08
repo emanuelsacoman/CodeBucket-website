@@ -41,8 +41,7 @@ body{
     align-items: center;
     gap: 3vh;
     background-color: #403c44;
-    width: fit-content;
-    height: fit-content;
+    width: 45vw;
 }
 
 .formBottom{
@@ -58,7 +57,6 @@ body{
     height: 100%;
     width: 100%;
 }
-
 
 button{
     margin-top: 1vh;
@@ -126,4 +124,11 @@ p, .alert {
 .sendButton{
     background-color: #77ff89;
     min-width: fit-content;
+}
+
+@media screen and (max-width: 400px) {
+    .formItens{
+        width: fit-content;
+        height: fit-content;
+    }
 }
