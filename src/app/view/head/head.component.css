@@ -52,10 +52,9 @@ nav{
 .algo{
     margin: 2%;
     cursor: pointer;
-    transition: color 0.2s ease;
 }
 
-.invite:hover, .algo:hover{
+.invite:hover{
     color: #d3be97;
 }
 

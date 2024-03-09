@@ -26,6 +26,7 @@ import { FooterEditComponent } from './view/screenManager/footer-edit/footer-edi
 import { HomeEditComponent } from './view/screenManager/home-edit/home-edit.component';
 import { HeaderEditComponent } from './view/screenManager/header-edit/header-edit.component';
 import { OutroEditComponent } from './view/screenManager/outro-edit/outro-edit.component';
+import { FooterComponent } from './view/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { OutroEditComponent } from './view/screenManager/outro-edit/outro-edit.c
     FooterEditComponent,
     HomeEditComponent,
     HeaderEditComponent,
-    OutroEditComponent
+    OutroEditComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

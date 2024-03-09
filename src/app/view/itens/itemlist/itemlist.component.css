@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 
 body{
-    height: 90vh;
+    min-height: 80vh;
     width: auto;
     background-color: #504c54;
     font-family: 'Cabin', sans-serif;
@@ -52,18 +52,15 @@ body{
 }
 
 .button{
-    position: static;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    width: 100%;
-    height: 100%;
 }
 
 .button img {
     width: clamp(50px, 20vw, 90px);
     height: auto;
-    margin: 1%;
+    margin: 2%;
     transition: all 0.05s ease-in-out;
 }
 

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 
 body{
-    height: 90vh;
+    height: auto;
     width: auto;
     background-color: #403c44;
     font-family: 'Cabin', sans-serif;
