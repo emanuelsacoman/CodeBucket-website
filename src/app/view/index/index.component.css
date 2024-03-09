@@ -153,6 +153,12 @@ a{
     width: clamp(200px, 25vw, 50vw);
     height: auto;
     border-radius: 10px;
+    transition: all  .2s ease-in-out;
+}
+
+.picExample img:hover {
+    transform: scale(1.1);
+    filter: brightness(110%);
 }
 
 @media screen and (max-width: 740px) {

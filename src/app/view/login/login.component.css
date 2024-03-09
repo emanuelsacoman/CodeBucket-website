@@ -104,6 +104,6 @@ p, .alert {
 
 @media screen and (max-width: 400px) {
     .item {
-        width: 80vw;
+        width: 95vw;
     }
 }
