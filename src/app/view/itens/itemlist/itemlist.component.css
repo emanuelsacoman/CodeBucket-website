@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 
 body{
-    min-height: 80vh;
+    min-height: 100vh;
     width: auto;
     background-color: #504c54;
     font-family: 'Cabin', sans-serif;
     color: #fff;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .commandsList{
@@ -43,18 +44,23 @@ body{
 }
 
 .values img {
-    width: clamp(50px, 20vw, 100px);
+    width: clamp(70px, 20vw, 150px);
     height: auto;
+    transition: all 0.1s ease-in-out;
 }
 
 .values img:hover {
-    scale: 1.1;
+    scale: 1.5;
 }
 
 .button{
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 2%;
 }
 
 .button img {
@@ -89,6 +95,18 @@ header{
     height: 100%;
     flex-wrap: wrap;
     align-items: center;
+}
+
+.nome, .alt{
+    padding: 2%;
+}
+
+.descricao{
+    width: 100%;
+}
+
+.right{
+    width: 50%;
 }
 
 @media screen and (max-width: 500px) {

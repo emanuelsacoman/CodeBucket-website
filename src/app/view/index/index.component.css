@@ -105,7 +105,7 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10vh;
+    gap: 12vh;
     background-color: #403c44;
 }
 
@@ -146,7 +146,6 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 .picExample img{

@@ -5,13 +5,12 @@
         </header>
         <div class="item" *ngFor="let comando of this.comandos; let i = index">
             <div class="values" (click)="editar(comando)">
-                <div class="separatedItens">
-                    <p>{{comando.nome}}</p>
-                    <p>{{comando.descricao}}</p>
+                <div class="separatedItens left">
+                    <p class="nome">{{comando.nome}}</p>
+                    <p class="descricao">{{comando.descricao}}</p>
                 </div>
-                <div class="separatedItens">
+                <div class="separatedItens right">
                     <img [src]="comando.imgUrl" alt="{{comando.alt}}">
-                    <p>{{comando.alt}}</p>
                 </div>
             </div>
         </div>
