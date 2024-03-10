@@ -82,6 +82,7 @@ export class FirebaseService {
       return this.firestore.collection(this.PATH2).doc(id).update({
         title: home.title,
         description: home.description,
+        bottext: home.bottext,
       });
     }
 

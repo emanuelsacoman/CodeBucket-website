@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Home } from 'src/app/model/interfaces/home';
 import { Outro } from 'src/app/model/interfaces/outro';
 import { AuthService } from 'src/app/model/services/auth.service';
 import { FirebaseService } from 'src/app/model/services/firebase.service';
@@ -11,6 +12,7 @@ import { FirebaseService } from 'src/app/model/services/firebase.service';
 })
 export class HeadComponent {
   public outros : Outro[] = [];
+  public homes: Home[] = [];
 
   constructor(private router: Router,
     private firebaseService: FirebaseService,
@@ -21,6 +23,15 @@ export class HeadComponent {
             id: outro.payload.doc.id,
             ...(outro.payload.doc.data() as any),
           } as Outro;
+        });
+      });
+
+      this.firebaseService.obterTodosHome().subscribe((res) => {
+        this.homes = res.map((home) => {
+          return {
+            id: home.payload.doc.id,
+            ...(home.payload.doc.data() as any),
+          } as Home;
         });
       });
 

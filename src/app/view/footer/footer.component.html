@@ -10,8 +10,8 @@
                 <p>{{foot.afiliated}}</p>
             </div>
             <div class="botao" *ngFor="let outros of this.outros;">
-                <a href="{{outros.link}}" target="_blank" class="botaoText">
-                    Convide CodeBucket
+                <a href="{{outros.link}}" target="_blank" class="botaoText" *ngFor="let home of this.homes;">
+                    {{home.bottext}}
                 </a>                    
             </div>
         </div>

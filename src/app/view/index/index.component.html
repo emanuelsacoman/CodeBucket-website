@@ -7,8 +7,8 @@
                     {{home.description}}
                 </p>
                 <div class="botao" *ngFor="let outros of this.outros;">
-                    <a href="{{outros.link}}" target="_blank" class="botaoText">
-                        Add to Discord
+                    <a href="{{outros.link}}" target="_blank" class="botaoText" *ngFor="let home of this.homes;">
+                        {{home.bottext}}
                     </a>                    
                 </div>
             </article>

@@ -6,8 +6,8 @@
             </a>
         </div>
         <div class="itens" *ngFor="let outros of this.outros;">
-            <a href="{{outros.link}}" target="_blank" class="invite">
-                Add to Discord
+            <a href="{{outros.link}}" target="_blank" class="invite" *ngFor="let home of this.homes;">
+                {{home.bottext}}
             </a>                
         </div>
         <div class="algo dropdown" *ngIf="isLoggedIn()">

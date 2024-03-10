@@ -18,6 +18,7 @@ export class HomeEditComponent {
   description! : string;
   alt! : string;
   link! : string;
+  bottext! : string;
 
   constructor(private router: Router,
     private formBuilder: FormBuilder,
@@ -31,10 +32,12 @@ export class HomeEditComponent {
 
     this.title = this.home?.title;
     this.description = this.home?.description;
+    this.bottext = this.home?.bottext;
 
     this.homeEdit = this.formBuilder.group({
       title: [this.title, [Validators.required]],
-      description: [this.description, [Validators.required]]
+      description: [this.description, [Validators.required]],
+      bottext: [this.bottext, [Validators.required]],
     });
   }
 

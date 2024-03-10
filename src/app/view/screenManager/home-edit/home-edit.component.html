@@ -17,6 +17,12 @@
                             <p *ngIf="isInvalidControl('description')">Erro na descrição</p>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <div class="input">
+                            <input type="text" id="bottext" placeholder="Insira o texto para adicionar o bot" formControlName="bottext" required/>
+                            <p *ngIf="isInvalidControl('bottext')">Erro no texto para adicionar o bot</p>
+                        </div>
+                    </div>
                 </div>
                 <button class="sendButton" type="submit">Enviar</button>
             </form>
