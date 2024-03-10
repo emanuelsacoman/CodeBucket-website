@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Footer } from 'src/app/model/interfaces/footer';
 import { Home } from 'src/app/model/interfaces/home';
 import { Outro } from 'src/app/model/interfaces/outro';
 import { FirebaseService } from 'src/app/model/services/firebase.service';
@@ -12,6 +13,7 @@ import { FirebaseService } from 'src/app/model/services/firebase.service';
 export class WebManagerComponent {
   public homes: Home[] = [];
   public outros: Outro[] = [];
+  public foots: Footer[] = [];
 
   constructor(private router: Router,
     private firebaseService: FirebaseService) {
@@ -32,12 +34,26 @@ export class WebManagerComponent {
           } as Outro;
         });
       });
+
+      this.firebaseService.obterTodosFooter().subscribe((res) => {
+        this.foots = res.map((foot) => {
+          return {
+            id: foot.payload.doc.id,
+            ...(foot.payload.doc.data() as any),
+          } as Footer;
+        });
+      });
     }
 
   goToHomeEdit(home: Home){
     this.router.navigateByUrl("/homeedit", {state: { home: home }});
   }
+
   goToOutroEdit(outro: Outro){
     this.router.navigateByUrl("/outro", {state: {outro: outro}});
+  }
+
+  goToFooterEdit(foot: Footer){
+    this.router.navigateByUrl("/footer", {state: {foot: foot}});
   }
 }

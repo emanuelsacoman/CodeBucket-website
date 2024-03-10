@@ -5,6 +5,7 @@ import { AngularFireStorage } from '@angular/fire/compat/storage';
 import { finalize } from 'rxjs';
 import { Home } from '../interfaces/home';
 import { Outro } from '../interfaces/outro';
+import { Footer } from '../interfaces/footer';
 
 @Injectable({
   providedIn: 'root'
@@ -98,7 +99,17 @@ export class FirebaseService {
 
     //footer
 
+    editarFooter(footer: Footer, id: string) {
+      return this.firestore.collection(this.PATH4).doc(id).update({
+        miniD: footer.miniD,
+        rights: footer.rights,
+        afiliated: footer.afiliated,
+      });
+    }
 
+    obterTodosFooter() {
+      return this.firestore.collection(this.PATH4).snapshotChanges();
+    }
 
     //footer
 

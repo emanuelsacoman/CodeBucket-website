@@ -1,17 +1,19 @@
 <body>
     <section class="footer">
-        <div class="left">
+        <div class="left" *ngFor="let foot of this.foots;">
             <div class="topfooter">
-                <h1>CodeBucket</h1>
-                <p>textinho nao muito grande</p>
+                <h1 *ngFor="let home of this.homes;">{{home.title}}</h1>
+                <p>{{foot.miniD}}</p>
             </div>
             <div class="bottomfooter">
-                <p>direitos reservados papapa</p>
-                <p>nao afiliado com discord.inc</p>
+                <p>{{foot.rights}}</p>
+                <p>{{foot.afiliated}}</p>
             </div>
-        </div>
-        <div class="right">
-            right
+            <div class="botao" *ngFor="let outros of this.outros;">
+                <a href="{{outros.link}}" target="_blank" class="botaoText">
+                    Convide CodeBucket
+                </a>                    
+            </div>
         </div>
     </section>
 </body>

@@ -61,6 +61,11 @@ const routes: Routes = [
     component: OutroEditComponent,
     canActivate: [AuthGuard],
   },
+  {
+    path: 'footer',
+    component: FooterEditComponent,
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({

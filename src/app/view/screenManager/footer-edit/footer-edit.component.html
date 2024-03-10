@@ -1,3 +1,31 @@
 <body>
-    
+    <section class="forms">
+        <div class="allForm">
+            <form class="formItens" (ngSubmit)="editItem()" [formGroup]="footerEdit" #formDir="ngForm">
+                <h1 class="title">FOOTER EDIT</h1>
+                <div class="formTop">
+
+                    <div class="form-group">
+                        <div class="input">
+                            <input type="text" id="title" placeholder="Insira a mini descrição" formControlName="miniD" required/>
+                            <p *ngIf="isInvalidControl('miniD')">Erro na mini descrição</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input">
+                            <input type="text" id="title" placeholder="Insira um texto sobre direitos" formControlName="rights" required/>
+                            <p *ngIf="isInvalidControl('rights')">Erro nos direitos</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input">
+                            <input type="text" id="title" placeholder="Insira um texto sobre afiliado" formControlName="afiliated" required/>
+                            <p *ngIf="isInvalidControl('afiliated')">Erro no texto sobre afiliado</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="sendButton" type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
 </body>

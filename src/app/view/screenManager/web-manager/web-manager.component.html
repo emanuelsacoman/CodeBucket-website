@@ -6,7 +6,7 @@
         <div class="home container" *ngFor="let home of this.homes; let i = index" (click)="goToHomeEdit(home)">
             <H1>HOME PAGE</H1>
         </div>
-        <div class="foot container">
+        <div class="foot container" *ngFor="let foot of this.foots; let k = index" (click)="goToFooterEdit(foot)">
             <H1>FOOTER</H1>
         </div>
         <div class="outro container" *ngFor="let outro of this.outros; let j = index" (click)="goToOutroEdit(outro)">
