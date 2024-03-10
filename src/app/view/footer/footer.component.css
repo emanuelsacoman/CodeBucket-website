@@ -47,13 +47,13 @@ body{
 .botaoText{
     cursor: pointer;
     background-color: #ffbc3c;
-    height: 8vh;
+    height: clamp(4vh, 5vw, 8vh);
     padding:1% 5% 1% 5%;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: clamp(14px, 3vw, 18px);
+    font-size: clamp(12px, 3vw, 18px);
     transition: all 0.2s ease;
     text-wrap: nowrap;
 }

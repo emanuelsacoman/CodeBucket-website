@@ -150,7 +150,7 @@ a{
 }
 
 .picExample img{
-    width: clamp(200px, 25vw, 50vw);
+    width: clamp(150px, 25vw, 50vw);
     height: auto;
     border-radius: 10px;
     transition: all  .2s ease-in-out;
@@ -173,6 +173,9 @@ a{
     }
 
     .description {
+        width: fit-content;
+    }
+    .codeDescription {
         width: fit-content;
     }
 }
