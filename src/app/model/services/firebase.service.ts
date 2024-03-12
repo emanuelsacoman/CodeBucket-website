@@ -31,7 +31,8 @@ export class FirebaseService {
         nome: command.nome,
         descricao: command.descricao,
         imgUrl: command.imgUrl,
-        alt: command.alt
+        alt: command.alt,
+        cooldown: command.cooldown,
       });
     }
     
@@ -40,7 +41,8 @@ export class FirebaseService {
         nome: command.nome,
         descricao: command.descricao,
         imgUrl: command.imgUrl,
-        alt: command.alt
+        alt: command.alt,
+        cooldown: command.cooldown,
       });
     }
 

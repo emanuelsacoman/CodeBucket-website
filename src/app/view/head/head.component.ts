@@ -52,4 +52,8 @@ export class HeadComponent {
   goToWebmanager(){
     this.router.navigate(['webmanager']);
   }
+
+  goToCommands(){
+    this.router.navigate(['commands']);
+  }
 }

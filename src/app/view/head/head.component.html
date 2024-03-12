@@ -9,6 +9,9 @@
             <a href="{{outros.link}}" target="_blank" class="invite" *ngFor="let home of this.homes;">
                 {{home.bottext}}
             </a>                
+            <a class="command" (click)="goToCommands()">
+                Comandos
+            </a>
         </div>
         <div class="algo dropdown" *ngIf="isLoggedIn()">
             <img class="dropbtn" src="https://cdn-icons-png.flaticon.com/512/2906/2906274.png" alt="Manager">

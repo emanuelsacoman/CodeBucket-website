@@ -17,6 +17,7 @@ export class ItemeditComponent implements OnInit{
   nome! : string;
   descricao! : string;
   alt! : string;
+  cooldown! : string;
 
   constructor(private router: Router,
     private formBuilder: FormBuilder,
@@ -31,11 +32,13 @@ export class ItemeditComponent implements OnInit{
     this.nome = this.comando?.nome;
     this.descricao = this.comando?.descricao;
     this.alt = this.comando?.alt;
+    this.cooldown = this.comando?.cooldown;
 
     this.editar = this.formBuilder.group({
       nome: [this.nome, [Validators.required]],
       descricao: [this.descricao, [Validators.required]],
       alt: [this.alt, [Validators.required]],
+      cooldown: [this.cooldown, [Validators.required]],
       imagem: [null],
     });
   }

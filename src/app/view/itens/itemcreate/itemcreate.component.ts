@@ -21,6 +21,7 @@ export class ItemcreateComponent {
         descricao: new FormControl(''),
         imagem: new FormControl(''),
         alt: new FormControl(''),
+        cooldown: new FormControl(''),
       });
       this.imagem = null;
   }
@@ -30,7 +31,8 @@ export class ItemcreateComponent {
       nome: ['', [Validators.required]],
       descricao: ['', [Validators.required]],
       imagem: ['', [Validators.required]],
-      alt: ['', [Validators.required]]
+      alt: ['', [Validators.required]],
+      cooldown: ['', [Validators.required]],
     })
   }
 
@@ -45,8 +47,8 @@ export class ItemcreateComponent {
 
   cadastro() {
     if (this.itemForm.valid) {
-      const { nome, descricao, imagem, alt } = this.itemForm.value;
-      const create: Command = new Command(nome, descricao, imagem, alt);
+      const { nome, descricao, imagem, alt, cooldown } = this.itemForm.value;
+      const create: Command = new Command(nome, descricao, imagem, alt, cooldown);
 
       if (imagem) {
         this.firebase.uploadImage(imagem, create)

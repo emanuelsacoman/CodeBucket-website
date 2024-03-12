@@ -4,12 +4,14 @@ export class Command {
     private _descricao!: string;
     private _imgUrl!: any;
     private _alt!: string;
+    private _cooldown!: string;
 
-    constructor(nome: string, descricao: string, imgUrl: any, alt: string) {
+    constructor(nome: string, descricao: string, imgUrl: any, alt: string, cooldown: string) {
         this._nome = nome;
         this._descricao = descricao;
         this._imgUrl = imgUrl;
         this._alt = alt;
+        this._cooldown = cooldown;
     }
 
     public get id(): string {
@@ -50,5 +52,13 @@ export class Command {
 
     public set alt(value: string) {
         this._alt = value;
+    }
+    
+    public get cooldown(): string {
+        return this._cooldown;
+    }
+
+    public set cooldown(value: string) {
+        this._cooldown = value;
     }
 }

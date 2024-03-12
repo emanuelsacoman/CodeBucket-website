@@ -31,6 +31,12 @@
                                 <p *ngIf="isInvalidControl('alt')">Erro no texto alternativo</p>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <div class="input">
+                                <input class="cooldown" type="text" id="cooldown" placeholder="Cooldown: (tempo) seconds" formControlName="cooldown" required/>
+                                <p *ngIf="isInvalidControl('cooldown')">Erro no texto de cooldown</p>
+                            </div>
+                        </div>
                     </div>
                     <div *ngIf="!imagem">
                         <img class="preImage" [src]="this.comando.imgUrl" />

@@ -36,12 +36,12 @@ nav{
     margin: 1%;
 }
 
-.invite {
+.invite, .command {
     text-wrap: nowrap;
     transition: color 0.2s ease;
 }
 
-.itens .invite{
+.itens .invite, .command{
     cursor: pointer;
 }
 
@@ -54,7 +54,7 @@ nav{
     cursor: pointer;
 }
 
-.invite:hover{
+.invite:hover, .command:hover{
     color: #d3be97;
 }
 
@@ -95,7 +95,7 @@ nav{
 }
 
 @media screen and (max-width: 400px) {
-    .invite{
+    .invite, .command{
         display: none;
     }
 
