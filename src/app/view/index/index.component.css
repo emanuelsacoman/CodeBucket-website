@@ -135,8 +135,8 @@ a{
 
 .codeDescription{
     color: #d3be97;
-    width: 80%;
     font-size: clamp(16px, 2vw, 20px);
+    width: 80%;
 }
 
 .picExample{

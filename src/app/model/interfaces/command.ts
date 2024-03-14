@@ -5,6 +5,7 @@ export class Command {
     private _imgUrl!: any;
     private _alt!: string;
     private _cooldown!: string;
+    showDescriptionFlag!: boolean;
 
     constructor(nome: string, descricao: string, imgUrl: any, alt: string, cooldown: string) {
         this._nome = nome;

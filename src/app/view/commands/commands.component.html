@@ -1,3 +1,38 @@
 <body>
-    
+    <section class="all">
+        <div class="info">
+           <h1>Informação</h1>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore beatae numquam odit ducimus minus sapiente, culpa iure cum doloribus illum accusantium sequi eum? Qui omnis maiores obcaecati, sed eos soluta.</p>
+        </div>
+        <div class="bottom">
+            
+            <div class="search-container">
+                <h1>Pesquise</h1>
+                <form action="">
+                  <input type="text" placeholder="Search.." name="search">
+                </form>
+              </div>
+
+            <div class="commands">
+                <div class="box" *ngFor="let item of this.comandos; let i = index" (click)="showDescription(item)">
+                    <div class="title">
+                        <div class="left">
+                            <div class="imagem">
+                                <img src="https://www.freeiconspng.com/uploads/white-down-arrow-png-2.png" alt="Down Arrow">
+                            </div>
+                            <h3 class="commandname">{{item.nome}}</h3>
+                        </div>
+                        <div class="right" *ngIf="item.showDescriptionFlag">
+                            <div class="cooldown">{{item.cooldown}}</div>
+                        </div>
+                    </div>
+                    <div class="description" *ngIf="item.showDescriptionFlag">
+                        <div class="bar"></div>
+                        <p>{{item.descricao}}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 </body>
