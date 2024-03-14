@@ -8,10 +8,10 @@ import { ItemcreateComponent } from './view/itens/itemcreate/itemcreate.componen
 import { AuthGuard } from './shared/auth.guard';
 import { WebManagerComponent } from './view/screenManager/web-manager/web-manager.component';
 import { FooterEditComponent } from './view/screenManager/footer-edit/footer-edit.component';
-import { HeaderEditComponent } from './view/screenManager/header-edit/header-edit.component';
 import { HomeEditComponent } from './view/screenManager/home-edit/home-edit.component';
 import { OutroEditComponent } from './view/screenManager/outro-edit/outro-edit.component';
 import { CommandsComponent } from './view/commands/commands.component';
+import { ComandosEditComponent } from './view/screenManager/comandos-edit/comandos-edit.component';
 
 const routes: Routes = [
   {
@@ -52,8 +52,8 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   {
-    path: 'headeredit',
-    component: HeaderEditComponent,
+    path: 'comandosedit',
+    component: ComandosEditComponent,
     canActivate: [AuthGuard],
   },
   {

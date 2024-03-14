@@ -1,7 +1,7 @@
 <body>
     <section class="all">
-        <div class="head container">
-            <h1>HEADER</h1>
+        <div class="head container" (click)="goToComandosEdit()">
+            <h1>COMANDOS PAGE</h1>
         </div>
         <div class="home container" *ngFor="let home of this.homes; let i = index" (click)="goToHomeEdit(home)">
             <H1>HOME PAGE</H1>

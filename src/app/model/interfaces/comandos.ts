@@ -1,8 +1,8 @@
-export class Header{
+export class ComandosEdit {
     private _id!: string;
 
     constructor(){
-        
+
     }
 
     public get id(): string {

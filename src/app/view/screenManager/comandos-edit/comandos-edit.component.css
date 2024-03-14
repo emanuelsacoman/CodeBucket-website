@@ -3,7 +3,9 @@
 body{
     height: 90vh;
     width: auto;
-    background-color: #403c44;
+    background-color: #504c54;
     font-family: 'Cabin', sans-serif;
     color: #fff;
+    display: flex;
+    flex-direction: column;
 }

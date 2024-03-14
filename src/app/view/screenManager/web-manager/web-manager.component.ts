@@ -56,4 +56,8 @@ export class WebManagerComponent {
   goToFooterEdit(foot: Footer){
     this.router.navigateByUrl("/footer", {state: {foot: foot}});
   }
+
+  goToComandosEdit(){
+    this.router.navigateByUrl("/comandosedit");
+  }
 }
