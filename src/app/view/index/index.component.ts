@@ -24,6 +24,7 @@ export class IndexComponent {
             ...(comando.payload.doc.data() as any),
           } as Command;
         });
+        this.comandos = this.comandos.filter(item => item.nome !== 'Invite');
       });
 
       this.firebaseService.obterTodosHome().subscribe((res) => {

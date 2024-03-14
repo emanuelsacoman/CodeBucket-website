@@ -57,16 +57,15 @@ body{
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    position: absolute;
+    position: sticky;
     bottom: 0;
     right: 0;
-    margin: 2%;
+    padding: 2%;
 }
 
 .button img {
     width: clamp(50px, 20vw, 90px);
     height: auto;
-    margin: 2%;
     transition: all 0.05s ease-in-out;
 }
 
