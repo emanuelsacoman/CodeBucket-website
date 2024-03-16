@@ -15,6 +15,7 @@ body{
     justify-content: space-around;
     height: 100%;
     width: 100%;
+    position: relative;
 }
 
 .container{
@@ -25,7 +26,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
 
 .container:hover{

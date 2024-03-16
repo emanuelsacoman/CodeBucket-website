@@ -1,25 +1,19 @@
 <body>
     <section class="all">
+        <div *ngIf="!this.homesLoaded || !this.footsLoaded || !this.outrosLoaded " class="loading">
+            <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="loading-gif">
+        </div>  
         <div class="head container" (click)="goToComandosEdit()">
             <h1>COMANDOS PAGE</h1>
         </div>
         <div class="home container" *ngFor="let home of this.homes; let i = index" (click)="goToHomeEdit(home)">
             <H1>HOME PAGE</H1>
-            <div *ngIf="!this.homesLoaded" class="loading">
-                <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="loading-gif">
-            </div>  
         </div>
         <div class="foot container" *ngFor="let foot of this.foots; let k = index" (click)="goToFooterEdit(foot)">
             <H1>FOOTER</H1>
-            <div *ngIf="!this.footsLoaded" class="loading">
-                <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="loading-gif">
-            </div>  
         </div>
         <div class="outro container" *ngFor="let outro of this.outros; let j = index" (click)="goToOutroEdit(outro)">
-            <H1>OUTRO</H1>
-            <div *ngIf="!this.outrosLoaded" class="loading">
-                <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="loading-gif">
-            </div>  
+            <H1>OUTRO</H1> 
         </div>
     </section>
 </body>
