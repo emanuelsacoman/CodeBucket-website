@@ -15,6 +15,11 @@ export class WebManagerComponent {
   public outros: Outro[] = [];
   public foots: Footer[] = [];
 
+  public homesLoaded = false;
+  public outrosLoaded = false;
+  public footsLoaded = false;
+  public comandosLoaded = false;
+
   constructor(private router: Router,
     private firebaseService: FirebaseService) {
       this.firebaseService.obterTodosHome().subscribe((res) => {
@@ -24,6 +29,7 @@ export class WebManagerComponent {
             ...(home.payload.doc.data() as any),
           } as Home;
         });
+        this.homesLoaded = true;
       });
 
       this.firebaseService.obterTodosOutro().subscribe((res) => {
@@ -33,6 +39,7 @@ export class WebManagerComponent {
             ...(outro.payload.doc.data() as any),
           } as Outro;
         });
+        this.outrosLoaded = true;
       });
 
       this.firebaseService.obterTodosFooter().subscribe((res) => {
@@ -42,7 +49,10 @@ export class WebManagerComponent {
             ...(foot.payload.doc.data() as any),
           } as Footer;
         });
+        this.footsLoaded = true;
       });
+
+      
     }
 
   goToHomeEdit(home: Home){

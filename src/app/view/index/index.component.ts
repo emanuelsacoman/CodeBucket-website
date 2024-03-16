@@ -14,6 +14,9 @@ export class IndexComponent {
   public comandos: Command[] = [];
   public homes: Home[] = [];
   public outros : Outro[] = [];
+  public comandosLoaded = false;
+  public homesLoaded = false;
+  public outrosLoaded = false;
 
   constructor(private router: Router,
     private firebaseService: FirebaseService){
@@ -25,6 +28,7 @@ export class IndexComponent {
           } as Command;
         });
         this.comandos = this.comandos.filter(item => item.nome !== 'Invite');
+        this.comandosLoaded = true;
       });
 
       this.firebaseService.obterTodosHome().subscribe((res) => {
@@ -34,6 +38,7 @@ export class IndexComponent {
             ...(home.payload.doc.data() as any),
           } as Home;
         });
+        this.homesLoaded = true;
       });
 
       this.firebaseService.obterTodosOutro().subscribe((res) => {
@@ -43,6 +48,7 @@ export class IndexComponent {
             ...(outro.payload.doc.data() as any),
           } as Outro;
         });
+        this.outrosLoaded = true;
       });
 
       

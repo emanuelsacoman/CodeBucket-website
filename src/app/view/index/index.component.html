@@ -1,5 +1,8 @@
 <body>
     <main>
+        <div *ngIf="!this.homesLoaded" class="loading">
+            <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="loading-gif">
+        </div>
         <section class="about">
             <article class="textAbout" >
                 <h1 *ngFor="let home of this.homes;">{{home.title}}</h1>
@@ -17,16 +20,22 @@
             </article>
         </section>
 
-        <section class="commands">        
+        <section class="commands">      
             <article class="command" *ngFor="let item of this.comandos | slice:8:14; let i = index" [ngClass]="{'reverse-row': i % 2 != 0}">
             <div class="howToCommand">
                 <h1 class="title">
                 <p>{{ item.nome }}</p>
-                </h1>
-                <p class="codeDescription">{{ item.descricao }}</p>
+                <div *ngIf="!this.comandosLoaded" class="loading">
+                    <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="loading-gif">
+                </div>  
+            </h1>
+            <p class="codeDescription">{{ item.descricao }}</p>
             </div>
             <div class="picExample">
                 <img src="{{item.imgUrl}}" alt="{{item.alt}}">
+                <div *ngIf="!this.comandosLoaded" class="loading">
+                    <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="loading-gif">
+                </div>
             </div>
             </article>
         </section>

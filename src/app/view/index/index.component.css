@@ -160,6 +160,23 @@ a{
     filter: brightness(110%);
 }
 
+.howToCommand, .picExample{
+    position: relative;
+}
+
+.loading{
+    position: absolute;
+    width: auto;
+    top: 50%;
+    left: 50%;
+}
+
+.loading img{
+    height: 5vh;
+    width: auto;
+    z-index: 2;
+}
+
 @media screen and (max-width: 740px) {
     .botImage{
         display: none;

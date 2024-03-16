@@ -12,6 +12,7 @@ export class CommandsComponent {
   showDescriptionFlag: boolean = false;
 
   public comandos: Command[] = [];
+  public comandosLoaded = false;
 
   constructor(private router: Router,
     private firebaseService: FirebaseService){
@@ -22,6 +23,7 @@ export class CommandsComponent {
             ...(comando.payload.doc.data() as any),
           } as Command;
         });
+        this.comandosLoaded = true;
       });
     }
 

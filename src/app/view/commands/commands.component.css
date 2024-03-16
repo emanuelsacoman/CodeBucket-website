@@ -145,6 +145,23 @@ body{
     font-size: clamp(16px, 2vw, 20px);
 }
 
+.commands{
+    position: relative;
+}
+
+.loading{
+    position: absolute;
+    width: auto;
+    top: 50%;
+    left: 50%;
+}
+
+.loading img{
+    height: 5vh;
+    width: auto;
+    z-index: 2;
+}
+
 @media screen and (max-width: 740px) {
     .bottom {
         flex-direction: column;

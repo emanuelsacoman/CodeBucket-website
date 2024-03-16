@@ -25,6 +25,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .container:hover{
@@ -38,4 +39,17 @@ body{
 h1{
     font-size: clamp(40px, 5vw, 100px);
     color: #504c54;
+}
+
+.loading{
+    position: absolute;
+    width: auto;
+    top: 50%;
+    left: 50%;
+}
+
+.loading img{
+    height: 5vh;
+    width: auto;
+    z-index: 2;
 }

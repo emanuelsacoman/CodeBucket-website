@@ -14,6 +14,9 @@
               </div>
 
             <div class="commands">
+                <div *ngIf="!this.comandosLoaded" class="loading">
+                    <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="loading-gif">
+                </div> 
                 <div class="box" *ngFor="let item of this.comandos; let i = index" (click)="showDescription(item)">
                     <div class="title">
                         <div class="left">
