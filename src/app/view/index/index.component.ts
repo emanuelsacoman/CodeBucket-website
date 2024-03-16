@@ -28,6 +28,7 @@ export class IndexComponent {
           } as Command;
         });
         this.comandos = this.comandos.filter(item => item.nome !== 'Invite');
+        this.comandos = this.comandos.filter(item => item.nome !== 'Servercount');
         this.comandosLoaded = true;
       });
 
