@@ -54,13 +54,12 @@ body{
 }
 
 .button{
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    width: fit-content;
     position: sticky;
     bottom: 0;
-    right: 0;
+    border-radius: 50%;
     padding: 2%;
+    align-self: flex-end;
 }
 
 .button img {
