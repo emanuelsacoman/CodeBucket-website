@@ -1,3 +1,36 @@
 <body>
-    
+    <section class="forms">
+        <div class="allForm">
+            <form class="formItens" (ngSubmit)="editItem()" [formGroup]="comandosEdit" #formDir="ngForm">
+                <h1 class="title">COMANDOS PAGE EDIT</h1>
+                <div class="formTop">
+                    <div class="form-group">
+                        <div class="input">
+                            <input type="text" id="title" placeholder="Insira o titulo" formControlName="title" required/>
+                            <p *ngIf="isInvalidControl('title')">Erro no título</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input">
+                            <textarea type="text" id="description" placeholder="Insira a descrição" formControlName="description" required rows="5" cols="30"></textarea>
+                            <p *ngIf="isInvalidControl('description')">Erro na descrição</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input">
+                            <input type="text" id="search" placeholder="Insira a search" formControlName="search" required>
+                            <p *ngIf="isInvalidControl('search')">Erro na search</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input">
+                            <input type="text" id="placeholder" placeholder="Insira o placeholder" formControlName="placeholder" required>
+                            <p *ngIf="isInvalidControl('placeholder')">Erro no placeholder</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="sendButton" type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
 </body>

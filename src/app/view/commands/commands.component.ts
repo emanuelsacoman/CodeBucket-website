@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ComandosEdit } from 'src/app/model/interfaces/comandos';
 import { Command } from 'src/app/model/interfaces/command';
 import { FirebaseService } from 'src/app/model/services/firebase.service';
 
@@ -11,6 +12,7 @@ import { FirebaseService } from 'src/app/model/services/firebase.service';
 export class CommandsComponent {
   showDescriptionFlag: boolean = false;
 
+  public comandos2: ComandosEdit[] = [];
   public comandos: Command[] = [];
   public comandosLoaded = false;
 
@@ -22,6 +24,16 @@ export class CommandsComponent {
             id: comando.payload.doc.id,
             ...(comando.payload.doc.data() as any),
           } as Command;
+        });
+        this.comandosLoaded = true;
+      });
+
+      this.firebaseService.obterTodosComandos().subscribe((res) => {
+        this.comandos2 = res.map((comando) => {
+          return {
+            id: comando.payload.doc.id,
+            ...(comando.payload.doc.data() as any),
+          } as ComandosEdit;
         });
         this.comandosLoaded = true;
       });

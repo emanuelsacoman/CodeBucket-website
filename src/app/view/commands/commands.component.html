@@ -1,15 +1,15 @@
 <body>
     <section class="all">
-        <div class="info">
-           <h1>Informação</h1>
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore beatae numquam odit ducimus minus sapiente, culpa iure cum doloribus illum accusantium sequi eum? Qui omnis maiores obcaecati, sed eos soluta.</p>
+        <div class="info" *ngFor="let comandos of this.comandos2;">
+           <h1>{{comandos.title}}</h1>
+           <p>{{comandos.description}}</p>
         </div>
         <div class="bottom">
             
-            <div class="search-container">
-                <h1>Pesquise</h1>
+            <div class="search-container" *ngFor="let comandos of this.comandos2;">
+                <h1>{{comandos.search}}</h1>
                 <form action="">
-                  <input type="text" placeholder="Search.." name="search">
+                  <input type="text" placeholder="{{comandos.placeholder}}" name="search">
                 </form>
               </div>
 

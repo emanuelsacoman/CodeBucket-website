@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ComandosEdit } from 'src/app/model/interfaces/comandos';
 import { Footer } from 'src/app/model/interfaces/footer';
 import { Home } from 'src/app/model/interfaces/home';
 import { Outro } from 'src/app/model/interfaces/outro';
@@ -14,6 +15,7 @@ export class WebManagerComponent {
   public homes: Home[] = [];
   public outros: Outro[] = [];
   public foots: Footer[] = [];
+  public comandos: ComandosEdit[] = [];
 
   public homesLoaded = false;
   public outrosLoaded = false;
@@ -52,6 +54,15 @@ export class WebManagerComponent {
         this.footsLoaded = true;
       });
 
+      this.firebaseService.obterTodosComandos().subscribe((res) => {
+        this.comandos = res.map((comando) => {
+          return {
+            id: comando.payload.doc.id,
+            ...(comando.payload.doc.data() as any),
+          } as ComandosEdit;
+        });
+        this.comandosLoaded = true;
+      });
       
     }
 
@@ -67,7 +78,7 @@ export class WebManagerComponent {
     this.router.navigateByUrl("/footer", {state: {foot: foot}});
   }
 
-  goToComandosEdit(){
-    this.router.navigateByUrl("/comandosedit");
+  goToComandosEdit(comando: ComandosEdit){
+    this.router.navigateByUrl("/comandosedit", {state: {comando: comando}});
   }
 }

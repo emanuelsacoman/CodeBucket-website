@@ -6,6 +6,7 @@ import { finalize } from 'rxjs';
 import { Home } from '../interfaces/home';
 import { Outro } from '../interfaces/outro';
 import { Footer } from '../interfaces/footer';
+import { ComandosEdit } from '../interfaces/comandos';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ import { Footer } from '../interfaces/footer';
 export class FirebaseService {
   private PATH : string = "Itens";
   private PATH2 : string = "Home";
-  private PATH3 : string = "Head";
+  private PATH3 : string = "Comandos";
   private PATH4 : string = "Footer";
   private PATH5 : string = "Outro";
 
@@ -94,11 +95,22 @@ export class FirebaseService {
 
     //home
 
-    //head
+    //comandos
 
+    editarComandos(comandos: ComandosEdit, id: string) {
+      return this.firestore.collection(this.PATH3).doc(id).update({
+        title: comandos.title,
+        description: comandos.description,
+        search: comandos.search,
+        placeholder: comandos.placeholder,
+      });
+    }
 
+    obterTodosComandos() {
+      return this.firestore.collection(this.PATH3).snapshotChanges();
+    }
 
-    //head
+    //comandos
 
     //footer
 
