@@ -11,6 +11,7 @@ body{
     display: flex;
     flex-direction: column;
     padding-top: 20vh;
+    position: relative;
 }
 
 .info{
@@ -152,8 +153,12 @@ body{
 .loading{
     position: absolute;
     width: auto;
-    top: 50%;
-    left: 50%;
+    background-color: #504c54;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
 }
 
 .loading img{

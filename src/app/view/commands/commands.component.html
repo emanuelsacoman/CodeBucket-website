@@ -1,5 +1,8 @@
 <body>
     <section class="all">
+        <div *ngIf="!this.comandosLoaded2" class="loading">
+            <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="loading-gif">
+        </div> 
         <div class="info" *ngFor="let comandos of this.comandos2;">
            <h1>{{comandos.title}}</h1>
            <p>{{comandos.description}}</p>
@@ -14,9 +17,6 @@
               </div>
 
             <div class="commands">
-                <div *ngIf="!this.comandosLoaded" class="loading">
-                    <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="loading-gif">
-                </div> 
                 <div class="box" *ngFor="let item of this.comandos; let i = index" (click)="showDescription(item)">
                     <div class="title">
                         <div class="left">

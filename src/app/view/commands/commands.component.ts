@@ -15,6 +15,7 @@ export class CommandsComponent {
   public comandos2: ComandosEdit[] = [];
   public comandos: Command[] = [];
   public comandosLoaded = false;
+  public comandosLoaded2 = false;
 
   constructor(private router: Router,
     private firebaseService: FirebaseService){
@@ -35,7 +36,7 @@ export class CommandsComponent {
             ...(comando.payload.doc.data() as any),
           } as ComandosEdit;
         });
-        this.comandosLoaded = true;
+        this.comandosLoaded2 = true;
       });
     }
 
