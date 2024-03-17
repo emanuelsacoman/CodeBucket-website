@@ -4,12 +4,16 @@ export class ComandosEdit {
     private _description!: string;
     private _search!: string;
     private _placeholder!: string;
+    private _lb!: string;
+    private _rb!: string;
 
-    constructor(title: string, description: string, search: string, placeholder: string){
+    constructor(title: string, description: string, search: string, placeholder: string, lb: string, rb: string){
         this._title = title;
         this._description = description;
         this._search = search;
         this._placeholder = placeholder;
+        this._lb = lb;
+        this._rb = rb;
     }
 
     public get id(): string {
@@ -50,5 +54,21 @@ export class ComandosEdit {
 
     public set placeholder(value: string) {
         this._placeholder = value;
+    }
+
+    public get lb(): string {
+        return this._lb;
+    }
+
+    public set lb(value: string) {
+        this._lb = value;
+    }
+
+    public get rb(): string {
+        return this._rb;
+    }
+
+    public set rb(value: string) {
+        this._rb = value;
     }
 }

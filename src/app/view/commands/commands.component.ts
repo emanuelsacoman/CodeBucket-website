@@ -14,8 +14,11 @@ export class CommandsComponent {
 
   public comandos2: ComandosEdit[] = [];
   public comandos: Command[] = [];
+  comandToShow: Command[] = [];
   public comandosLoaded = false;
   public comandosLoaded2 = false;
+
+  searchTerm: string = '';
 
   constructor(private router: Router,
     private firebaseService: FirebaseService){
@@ -26,6 +29,7 @@ export class CommandsComponent {
             ...(comando.payload.doc.data() as any),
           } as Command;
         });
+        this.comandToShow = this.comandos;
         this.comandosLoaded = true;
       });
 
@@ -44,10 +48,29 @@ export class CommandsComponent {
       this.comandos.forEach(item => {
         if(item.id === command.id){
           item.showDescriptionFlag = !item.showDescriptionFlag;
-        } else {
-          item.showDescriptionFlag = false;
         }
       });
+    }
+
+    showAll() {
+      this.comandos.forEach(item => {
+        item.showDescriptionFlag = true; 
+      });
+    }
+    
+    hideAll() {
+      this.comandos.forEach(item => {
+        item.showDescriptionFlag = false;
+      });
+    }
+    
+
+    search(e: Event):void{
+      const target = e.target as HTMLInputElement;
+      const value = target.value.toLowerCase();
+      this.comandToShow = this.comandos.filter(comando => {
+        return comando.nome.toLowerCase().includes(value);
+      })
     }
 
 }

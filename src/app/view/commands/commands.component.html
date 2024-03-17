@@ -11,13 +11,17 @@
             
             <div class="search-container" *ngFor="let comandos of this.comandos2;">
                 <h1>{{comandos.search}}</h1>
-                <form action="">
-                  <input type="text" placeholder="{{comandos.placeholder}}" name="search">
+                <form>
+                  <input type="text" placeholder="{{comandos.placeholder}}" (input)="search($event)">
                 </form>
+                <div class="buttons">
+                    <div class="leftbutton button" (click)="showAll()">{{comandos.lb}}</div>
+                    <div class="rightbutton button" (click)="hideAll()">{{comandos.rb}}</div>
+                </div>
               </div>
 
             <div class="commands">
-                <div class="box" *ngFor="let item of this.comandos; let i = index" (click)="showDescription(item)">
+                <div class="box" *ngFor="let item of this.comandToShow; let i = index" (click)="showDescription(item)">
                     <div class="title">
                         <div class="left">
                             <div class="imagem">

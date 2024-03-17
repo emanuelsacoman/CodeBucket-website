@@ -103,6 +103,8 @@ export class FirebaseService {
         description: comandos.description,
         search: comandos.search,
         placeholder: comandos.placeholder,
+        lb: comandos.lb,
+        rb: comandos.rb,
       });
     }
 

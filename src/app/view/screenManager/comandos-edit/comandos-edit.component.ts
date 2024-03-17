@@ -18,6 +18,8 @@ export class ComandosEditComponent {
   description! : string;
   search!: string;
   placeholder!: string;
+  lb!: string;
+  rb!: string;
 
   constructor(private router: Router,
     private formBuilder: FormBuilder,
@@ -33,12 +35,16 @@ export class ComandosEditComponent {
     this.description = this.comando?.description;
     this.search = this.comando?.search;
     this.placeholder = this.comando?.placeholder;
+    this.lb = this.comando?.lb;
+    this.rb = this.comando?.rb;
 
     this.comandosEdit = this.formBuilder.group({
       title: [this.title, [Validators.required]],
       description: [this.description, [Validators.required]],
       search: [this.search, [Validators.required]],
       placeholder: [this.placeholder, [Validators.required]],
+      lb: [this.lb, [Validators.required]],
+      rb: [this.rb, [Validators.required]],
       
     });
   }

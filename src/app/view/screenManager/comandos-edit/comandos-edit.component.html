@@ -16,16 +16,33 @@
                             <p *ngIf="isInvalidControl('description')">Erro na descrição</p>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <div class="input">
-                            <input type="text" id="search" placeholder="Insira a search" formControlName="search" required>
-                            <p *ngIf="isInvalidControl('search')">Erro na search</p>
+                    <div class="mid">
+
+                        <div class="form-group">
+                            <div class="input">
+                                <input type="text" id="search" placeholder="Insira a search" formControlName="search" required>
+                                <p *ngIf="isInvalidControl('search')">Erro na search</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input">
+                                <input type="text" id="placeholder" placeholder="Insira o placeholder" formControlName="placeholder" required>
+                                <p *ngIf="isInvalidControl('placeholder')">Erro no placeholder</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <div class="input">
-                            <input type="text" id="placeholder" placeholder="Insira o placeholder" formControlName="placeholder" required>
-                            <p *ngIf="isInvalidControl('placeholder')">Erro no placeholder</p>
+                    <div class="bottom">
+                        <div class="form-group">
+                            <div class="input">
+                                <input type="text" id="lb" placeholder="Insira o texto do botão esquerdo" formControlName="lb" required>
+                                <p *ngIf="isInvalidControl('lb')">Erro no texto do botão esquerdo</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input">
+                                <input type="text" id="rb" placeholder="Insira o texto do botão direito" formControlName="rb" required>
+                                <p *ngIf="isInvalidControl('rb')">Erro no texto do botão direito</p>
+                            </div>
                         </div>
                     </div>
                 </div>

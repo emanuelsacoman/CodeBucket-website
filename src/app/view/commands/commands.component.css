@@ -60,6 +60,8 @@ body{
     display: flex;
     flex-direction: column;
     gap: 3vh;
+    min-height: 30vh;
+    position: relative;
 }
 
 .box{
@@ -146,10 +148,6 @@ body{
     font-size: clamp(16px, 2vw, 20px);
 }
 
-.commands{
-    position: relative;
-}
-
 .loading{
     position: absolute;
     width: auto;
@@ -165,6 +163,29 @@ body{
     height: 5vh;
     width: auto;
     z-index: 2;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.buttons .button {
+    height: 100%;
+    font-size: clamp(14px, 2vw, 18px);
+    color: #fff;
+    padding: 3%;
+    cursor: pointer;
+    border-radius: 3px;
+    text-wrap: nowrap;
+    background-color: #ffbc3c;
+    transition: all 0.1s ease-in-out;
+}
+
+.buttons .button:hover{
+    filter: brightness(110%);
 }
 
 @media screen and (max-width: 740px) {
