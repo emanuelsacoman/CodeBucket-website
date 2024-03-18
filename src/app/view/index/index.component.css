@@ -105,7 +105,7 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 12vh;
+    gap: 15vh;
     background-color: #403c44;
 }
 
@@ -176,6 +176,18 @@ a{
     width: auto;
     z-index: 2;
 }
+
+.posAbout{
+    background-color:  #504c54;
+    height: 25vh;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    top: 30px;
+    padding: 2%;
+}
+
 
 @media screen and (max-width: 740px) {
     .botImage{

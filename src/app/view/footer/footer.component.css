@@ -77,3 +77,11 @@ a{
     scale: 1.01;
     filter: brightness(1.1);
 }
+
+@media screen and (max-width: 400px) {
+    .right{
+        align-items: end;
+        gap: 1vh;
+    }
+    
+}
