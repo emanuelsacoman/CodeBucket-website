@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { Footer } from 'src/app/model/interfaces/footer';
 import { Home } from 'src/app/model/interfaces/home';
 import { Outro } from 'src/app/model/interfaces/outro';
@@ -43,5 +43,13 @@ export class FooterComponent {
           } as Outro;
         });
       });
+    }
+
+    goToHome(){
+      this.router.navigateByUrl("/");
+    }
+    
+    goToCommands(){
+      this.router.navigateByUrl("/commands");
     }
 }

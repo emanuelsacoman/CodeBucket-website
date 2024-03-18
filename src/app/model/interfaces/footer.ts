@@ -3,11 +3,15 @@ export class Footer {
     private _miniD!: string;
     private _rights!: string;
     private _afiliated!: string;
+    private _homeRouter!: string;
+    private _commandsRouter!: string;
   
-    constructor(miniD: string, rights: string, afiliated: string) {
+    constructor(miniD: string, rights: string, afiliated: string, homeRouter: string, commandsRouter: string) {
         this._miniD = miniD;
         this._rights = rights;
         this._afiliated = afiliated;
+        this._homeRouter = homeRouter;
+        this._commandsRouter = commandsRouter;
     }
   
     public get id(): string {
@@ -40,5 +44,21 @@ export class Footer {
   
     public set afiliated(value: string) {
       this._afiliated = value;
+    }
+  
+    public get homeRouter(): string {
+      return this._homeRouter;
+    }
+  
+    public set homeRouter(value: string) {
+      this._homeRouter = value;
+    }
+  
+    public get commandsRouter(): string {
+      return this._commandsRouter;
+    }
+  
+    public set commandsRouter(value: string) {
+      this._commandsRouter = value;
     }
   }

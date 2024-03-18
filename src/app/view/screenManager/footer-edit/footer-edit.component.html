@@ -23,6 +23,22 @@
                             <p *ngIf="isInvalidControl('afiliated')">Erro no texto sobre afiliado</p>
                         </div>
                     </div>
+                    <div class="bottom">
+
+                        <div class="form-group">
+                            <div class="input">
+                                <input type="text" id="title" placeholder="Insira o texto para homeRouter" formControlName="homeRouter" required/>
+                                <p *ngIf="isInvalidControl('homeRouter')">Erro no texto de homeRouter</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input">
+                                <input type="text" id="title" placeholder="Insira o texto para commandsRouter" formControlName="commandsRouter" required/>
+                                <p *ngIf="isInvalidControl('commandsRouter')">Erro no texto de commandsRouter</p>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
                 <button class="sendButton" type="submit">Enviar</button>
             </form>

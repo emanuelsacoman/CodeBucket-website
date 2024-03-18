@@ -15,5 +15,9 @@
                 </a>                    
             </div>
         </div>
+        <div class="right" *ngFor="let foot of this.foots;">
+            <p (click)="goToHome()">{{foot.homeRouter}}</p>
+            <p (click)="goToCommands()">{{foot.commandsRouter}}</p>
+        </div>
     </section>
 </body>

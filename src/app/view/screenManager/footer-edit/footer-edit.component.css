@@ -126,6 +126,16 @@ p, .alert {
     min-width: fit-content;
 }
 
+.bottom{
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+}
+
+.bottom .form-group{
+    width: 50%;
+}
+
 @media screen and (max-width: 400px) {
     .formItens{
         width: 90VW;

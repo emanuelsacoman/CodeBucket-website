@@ -121,6 +121,8 @@ export class FirebaseService {
         miniD: footer.miniD,
         rights: footer.rights,
         afiliated: footer.afiliated,
+        homeRouter: footer.homeRouter,
+        commandsRouter: footer.commandsRouter,
       });
     }
 

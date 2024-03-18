@@ -9,8 +9,8 @@
             <a href="{{outros.link}}" target="_blank" class="invite" *ngFor="let home of this.homes;">
                 {{home.bottext}}
             </a>                
-            <a class="command" (click)="goToCommands()">
-                Comandos
+            <a class="command" (click)="goToCommands()" *ngFor="let foot of this.foots;">
+                {{foot.commandsRouter}}
             </a>
         </div>
         <div class="algo dropdown" *ngIf="isLoggedIn()">

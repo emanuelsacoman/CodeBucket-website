@@ -17,6 +17,8 @@ export class FooterEditComponent {
   miniD!: string;
   rights!: string;
   afiliated!: string;
+  homeRouter!: string;
+  commandsRouter!: string;
 
   constructor(private router: Router,
     private formBuilder: FormBuilder,
@@ -31,11 +33,15 @@ export class FooterEditComponent {
     this.miniD = this.foot?.miniD;
     this.rights = this.foot?.rights;
     this.afiliated = this.foot?.afiliated;
+    this.homeRouter = this.foot?.homeRouter;
+    this.commandsRouter = this.foot?.commandsRouter;
 
     this.footerEdit = this.formBuilder.group({
       miniD: [this.miniD, [Validators.required]],
       rights: [this.rights, [Validators.required]],
-      afiliated: [this.afiliated, [Validators.required]]
+      afiliated: [this.afiliated, [Validators.required]],
+      homeRouter: [this.homeRouter, [Validators.required]],
+      commandsRouter: [this.commandsRouter, [Validators.required]],
     });
   }
 

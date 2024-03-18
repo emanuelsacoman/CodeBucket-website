@@ -38,10 +38,15 @@ body{
 .right{
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: start;
     margin: 2%;
     height: 100%;
     width: 50%;
+    gap: 2vh;
+}
+
+.right p {
+    cursor: pointer;
 }
 
 .botaoText{
