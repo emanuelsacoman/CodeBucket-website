@@ -42,4 +42,11 @@ export class AuthService {
     return signInWithEmailAndPassword(this.auth,
         email, senha);
   }
+
+  public deslogar(){
+    return this.auth.signOut().then(()=>{
+      localStorage.removeItem('user');
+      this.router.navigate(['']);
+    })
+   }
 }

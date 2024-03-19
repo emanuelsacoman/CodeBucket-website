@@ -52,6 +52,10 @@ export class HeadComponent {
     return this.authService.isLoggedIn;
   }
 
+  logout(){
+    return this.authService.deslogar();
+  }
+
   goBack(){
     this.router.navigate([''])
   }
