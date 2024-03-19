@@ -35,7 +35,10 @@
                     </div>
                     <div class="description" *ngIf="item.showDescriptionFlag">
                         <div class="bar"></div>
-                        <p>{{item.descricao}}</p>
+                        <div class="descriptionItens">
+                            <p>{{item.descricao}}</p>
+                            <img src="{{item.imgUrl}}" alt="{{item.alt}}">
+                        </div>
                     </div>
                 </div>
             </div>

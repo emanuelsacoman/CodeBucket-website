@@ -143,6 +143,13 @@ body{
     margin-block:  1rem;
 }
 
+.descriptionItens {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2vh;
+}
+
 .description p {
     color: #d3be97;
     font-size: clamp(16px, 2vw, 20px);
@@ -185,6 +192,18 @@ body{
 }
 
 .buttons .button:hover{
+    filter: brightness(110%);
+}
+
+.description img {
+    width: clamp(150px, 25vw, 50vw);
+    height: auto;
+    border-radius: 10px;
+    transition: all  .2s ease-in-out;
+}
+
+.description img:hover {
+    transform: scale(1.1);
     filter: brightness(110%);
 }
 
