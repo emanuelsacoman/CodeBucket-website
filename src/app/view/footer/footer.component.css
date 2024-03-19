@@ -47,6 +47,11 @@ body{
 
 .right p {
     cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.right p:hover{
+    color: #deb76d;
 }
 
 .botaoText{
