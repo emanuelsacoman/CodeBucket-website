@@ -105,11 +105,35 @@ export class FirebaseService {
         placeholder: comandos.placeholder,
         lb: comandos.lb,
         rb: comandos.rb,
+        dropImg: comandos.dropImg,
       });
     }
 
     obterTodosComandos() {
       return this.firestore.collection(this.PATH3).snapshotChanges();
+    }
+
+    uploadImageComandos(imagem: any, comandos : ComandosEdit){
+      const file = imagem.item(0);
+      if(file.type.split('/')[0] !== 'image'){
+        console.error("Tipo Não Suportado.");
+        return;
+      }
+      const path = `images/${comandos.title}_${file.name}`;
+      const fileRef = this.storage.ref(path);
+      let task = this.storage.upload(path,file);
+      task.snapshotChanges().pipe(
+        finalize(() =>{
+          let uploadFileURL = fileRef.getDownloadURL();
+          uploadFileURL.subscribe(resp => {
+            comandos.dropImg = resp;
+            {
+              this.editarComandos(comandos, comandos.id);
+            }
+          })
+        })
+        ).subscribe();
+      return task;
     }
 
     //comandos

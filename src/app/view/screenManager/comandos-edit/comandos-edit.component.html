@@ -30,6 +30,11 @@
                                 <p *ngIf="isInvalidControl('placeholder')">Erro no placeholder</p>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <div class="input imageInput">
+                                <input class="img" type="file" id="imagem" formControlName="imagem" accept="image/*" (change)="uploadFile($event)">
+                            </div>
+                        </div>
                     </div>
                     <div class="bottom">
                         <div class="form-group">
@@ -43,6 +48,9 @@
                                 <input type="text" id="rb" placeholder="Insira o texto do botão direito" formControlName="rb" required>
                                 <p *ngIf="isInvalidControl('rb')">Erro no texto do botão direito</p>
                             </div>
+                        </div>
+                        <div *ngIf="!imagem">
+                            <img class="preImage" [src]="this.comando.dropImg" />
                         </div>
                     </div>
                 </div>

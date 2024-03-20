@@ -45,19 +45,32 @@ export class ComandosEditComponent {
       placeholder: [this.placeholder, [Validators.required]],
       lb: [this.lb, [Validators.required]],
       rb: [this.rb, [Validators.required]],
+      imagem: [null],
       
     });
   }
 
   editItem() {
     if (this.comandosEdit.valid){
-      const new_part: ComandosEdit = {...this.comandosEdit.value,id: this.comando.id};
+      const new_part: ComandosEdit = {...this.comandosEdit.value,id: this.comando.id, dropImg: this.comando.dropImg};
+      if(this.imagem){
+        this.firebase.uploadImageComandos(this.imagem, new_part)?.then(() =>{
+          this.router.navigate(['/webmanager'])
+        });
+      }else{
+        new_part.dropImg = this.comando.dropImg;
+        
         this.firebase.editarComandos(new_part, this.comando.id).then(() => this.router.navigate(['/webmanager'])).catch((error) =>{
           console.log(error);
         });
+      }
       }else{
       window.alert('Campos obrigatorios!');
     }
+  }
+
+  uploadFile(event: any){
+    this.imagem = event.target.files;
   }
 
   isInvalidControl(controlName: string) {

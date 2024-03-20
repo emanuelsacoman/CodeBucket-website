@@ -24,8 +24,8 @@
                 <div class="box" *ngFor="let item of this.comandToShow; let i = index" (click)="showDescription(item)">
                     <div class="title">
                         <div class="left">
-                            <div class="imagem">
-                                <img src="https://www.freeiconspng.com/uploads/white-down-arrow-png-2.png" alt="Down Arrow">
+                            <div class="imagem" *ngFor="let comandos of this.comandos2;">
+                                <img src="{{comandos.dropImg}}" alt="Down Arrow">
                             </div>
                             <h3 class="commandname">{{item.nome}}</h3>
                         </div>

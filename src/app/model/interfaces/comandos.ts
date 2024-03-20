@@ -6,6 +6,7 @@ export class ComandosEdit {
     private _placeholder!: string;
     private _lb!: string;
     private _rb!: string;
+    private _dropImg!: any;
 
     constructor(title: string, description: string, search: string, placeholder: string, lb: string, rb: string){
         this._title = title;
@@ -70,5 +71,13 @@ export class ComandosEdit {
 
     public set rb(value: string) {
         this._rb = value;
+    }
+    
+    get dropImg(): any {
+        return this._dropImg;
+    }
+
+    set dropImg(dropImg: any) {
+        this._dropImg = dropImg;
     }
 }
