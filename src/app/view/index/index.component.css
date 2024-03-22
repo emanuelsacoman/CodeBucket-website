@@ -149,7 +149,7 @@ a{
 }
 
 .picExample img{
-    width: clamp(150px, 25vw, 50vw);
+    width: clamp(160px, 25vw, 50vw);
     height: auto;
     border-radius: 10px;
     transition: all  .2s ease-in-out;
@@ -205,5 +205,25 @@ a{
     }
     .codeDescription {
         width: fit-content;
+    }
+}
+
+@media screen and (max-width: 300px){
+    .commands{
+        gap: 6vh;
+    }
+
+    .command{
+        flex-direction: column;
+        align-items: center;
+        gap: 3vh;
+    }
+
+    .howToCommand{
+        width: 100%
+    }
+
+    .picExample img{
+        width: clamp(90vw, 25vw, 50vw);
     }
 }
