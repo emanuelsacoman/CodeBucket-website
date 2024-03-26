@@ -7,9 +7,15 @@
                 </div>
                 <div class="bottomAll">
                     <div class="formBottom">
-                        <div class="form-group">
-                            <div class="input imageInput">
-                                <input class="img" type="file" id="imagem" formControlName="imagem" accept="image/*" (change)="uploadFile($event)">
+                        <div class="imageBot">
+
+                            <div class="form-group">
+                                <div class="input imageInput">
+                                    <input class="img" type="file" id="imagem" formControlName="imagem" accept="image/*" (change)="uploadFile($event)">
+                                </div>
+                            </div>
+                            <div *ngIf="!imagem">
+                                <img class="preImage" [src]="this.outro.botImg" />
                             </div>
                         </div>
                         <div class="form-group">
@@ -24,9 +30,6 @@
                                 <p *ngIf="isInvalidControl('link')">Erro no link</p>
                             </div>
                         </div>
-                    </div>
-                    <div *ngIf="!imagem">
-                        <img class="preImage" [src]="this.outro.botImg" />
                     </div>
                 </div>
                 <button class="sendButton" type="submit">Enviar</button>
