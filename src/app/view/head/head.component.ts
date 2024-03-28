@@ -69,6 +69,6 @@ export class HeadComponent {
   }
 
   goToCommands(){
-    this.router.navigate(['commands']);
+    this.router.navigate(['comandos']);
   }
 }

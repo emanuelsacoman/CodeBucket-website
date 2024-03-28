@@ -50,6 +50,6 @@ export class FooterComponent {
     }
     
     goToCommands(){
-      this.router.navigateByUrl("/commands");
+      this.router.navigateByUrl("/comandos");
     }
 }

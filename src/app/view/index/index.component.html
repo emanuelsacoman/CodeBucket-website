@@ -1,7 +1,7 @@
 <body>
     <main>
         <div *ngIf="!this.homesLoaded" class="loading">
-            <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="loading-gif">
+            <img src="./assets/images/spinner.gif" alt="loading-gif">
         </div>
         <section class="about">
             <article class="textAbout" >
@@ -26,7 +26,7 @@
                 <h1 class="title">
                 <p>{{ item.nome }}</p>
                 <div *ngIf="!this.comandosLoaded" class="loading">
-                    <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="loading-gif">
+                    <img src="./assets/images/spinner.gif" alt="loading-gif">
                 </div>  
             </h1>
             <p class="codeDescription">{{ item.descricao }}</p>
@@ -34,7 +34,7 @@
             <div class="picExample">
                 <img src="{{item.imgUrl}}" alt="{{item.alt}}">
                 <div *ngIf="!this.comandosLoaded" class="loading">
-                    <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="loading-gif">
+                    <img src="./assets/images/spinner.gif" alt="loading-gif">
                 </div>
             </div>
             </article>
