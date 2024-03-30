@@ -36,6 +36,18 @@ section{
     transform: translateY(-100px);
 }
 
+.fadeIn{
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 .botImage img {
     height: auto;

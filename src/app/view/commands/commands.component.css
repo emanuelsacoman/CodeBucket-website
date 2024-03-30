@@ -207,6 +207,34 @@ body{
     filter: brightness(110%);
 }
 
+.fadeIn{
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeInRight{
+    animation: fadeInRight 0.5s ease forwards;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @media screen and (max-width: 740px) {
     .bottom {
         flex-direction: column;

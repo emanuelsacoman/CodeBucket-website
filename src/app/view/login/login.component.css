@@ -92,6 +92,19 @@ p, .alert {
     margin: 0 auto; 
 }
 
+.fadeIn{
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 @media screen and (max-width: 570px) {
     .picSpace{
         display: none;

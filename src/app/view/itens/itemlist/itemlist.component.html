@@ -1,21 +1,21 @@
 <body>
-    <section class="commandsList">
+    <section class="commandsList fadeIn">
         <header>
-            <p class="titulo">LISTA DE ITENS</p>
+            <p class="titulo fadeIn">LISTA DE ITENS</p>
         </header>
-        <div class="item" *ngFor="let comando of this.comandos; let i = index">
-            <div class="values" (click)="editar(comando)">
-                <div class="separatedItens left">
-                    <p class="nome">{{comando.nome}}</p>
-                    <p class="descricao">{{comando.descricao}}</p>
+        <div class="item fadeIn" *ngFor="let comando of this.comandos; let i = index">
+            <div class="values fadeIn" (click)="editar(comando)">
+                <div class="separatedItens left fadeIn">
+                    <p class="nome fadeIn">{{comando.nome}}</p>
+                    <p class="descricao fadeIn">{{comando.descricao}}</p>
                 </div>
-                <div class="separatedItens right">
+                <div class="separatedItens right fadeIn">
                     <img [src]="comando.imgUrl" alt="{{comando.alt}}">
                 </div>
             </div>
         </div>
     </section>
-    <div class="button">
+    <div class="button fadeIn">
         <img (click)="irParaCadastro()" src="https://static-00.iconduck.com/assets.00/plus-icon-1024x1024-jdaf40nu.png" alt="Botão para add">
     </div>
 </body>

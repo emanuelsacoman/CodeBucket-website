@@ -55,3 +55,16 @@ h1{
     width: auto;
     z-index: 2;
 }
+
+.fadeIn{
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

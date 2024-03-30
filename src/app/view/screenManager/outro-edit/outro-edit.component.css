@@ -134,3 +134,16 @@ p, .alert {
     background-color: #77ff89;
     min-width: fit-content;
 }
+
+.fadeIn{
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

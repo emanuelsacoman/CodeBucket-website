@@ -1,15 +1,15 @@
 <body>
     <nav>
         <div class="picstart">
-            <a (click)="goBack()" class="pic" *ngFor="let outros of this.outros;">
+            <a (click)="goBack()" class="pic fadeIn" *ngFor="let outros of this.outros;">
                 <img src="{{outros.botImg}}" alt="{{outros.alt}}">
             </a>
         </div>
         <div class="itens" *ngFor="let outros of this.outros;">
-            <a href="{{outros.link}}" target="_blank" class="invite" *ngFor="let home of this.homes;">
+            <a href="{{outros.link}}" target="_blank" class="invite fadeIn" *ngFor="let home of this.homes;">
                 {{home.bottext}}
             </a>                
-            <a class="command" (click)="goToCommands()" *ngFor="let foot of this.foots;">
+            <a class="command fadeIn" (click)="goToCommands()" *ngFor="let foot of this.foots;">
                 {{foot.commandsRouter}}
             </a>
         </div>

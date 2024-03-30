@@ -4,18 +4,18 @@
             <img src="./assets/images/spinner.gif" alt="loading-gif">
         </div>
         <section class="about">
-            <article class="textAbout" >
-                <h1 *ngFor="let home of this.homes;">{{home.title}}</h1>
-                <p class="description" *ngFor="let home of this.homes;">
+            <article class="textAbout">
+                <h1 class="fadeIn" *ngFor="let home of this.homes;">{{home.title}}</h1>
+                <p class="description fadeIn" *ngFor="let home of this.homes;">
                     {{home.description}}
                 </p>
-                <div class="botao" *ngFor="let outros of this.outros;">
+                <div class="botao fadeIn" *ngFor="let outros of this.outros;">
                     <a href="{{outros.link}}" target="_blank" class="botaoText" *ngFor="let home of this.homes;">
                         {{home.bottext}}
                     </a>                    
                 </div>
             </article>
-            <article class="botImage"  *ngFor="let outros of this.outros;">
+            <article class="botImage fadeIn" *ngFor="let outros of this.outros;">
                 <img src="{{outros.botImg}}" alt="{{outros.alt}}">
             </article>
         </section>

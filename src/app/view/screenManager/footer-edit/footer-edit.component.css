@@ -136,6 +136,19 @@ p, .alert {
     width: 50%;
 }
 
+.fadeIn{
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 @media screen and (max-width: 400px) {
     .formItens{
         width: 90VW;

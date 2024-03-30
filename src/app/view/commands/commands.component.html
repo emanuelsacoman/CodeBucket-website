@@ -3,13 +3,13 @@
         <div *ngIf="!this.comandosLoaded2" class="loading">
             <img src="./assets/images/spinner.gif" alt="loading-gif">
         </div> 
-        <div class="info" *ngFor="let comandos of this.comandos2;">
+        <div class="info fadeIn" *ngFor="let comandos of this.comandos2;">
            <h1>{{comandos.title}}</h1>
            <p>{{comandos.description}}</p>
         </div>
         <div class="bottom">
             
-            <div class="search-container" *ngFor="let comandos of this.comandos2;">
+            <div class="search-container fadeIn" *ngFor="let comandos of this.comandos2;">
                 <h1>{{comandos.search}}</h1>
                 <form>
                   <input type="text" placeholder="{{comandos.placeholder}}" (input)="search($event)">
@@ -21,7 +21,7 @@
               </div>
 
             <div class="commands">
-                <div class="box" *ngFor="let item of this.comandToShow; let i = index" (click)="showDescription(item)">
+                <div class="box fadeInRight" *ngFor="let item of this.comandToShow; let i = index" (click)="showDescription(item)">
                     <div class="title">
                         <div class="left">
                             <div class="imagem" *ngFor="let comandos of this.comandos2;">
@@ -37,7 +37,7 @@
                         <div class="bar"></div>
                         <div class="descriptionItens">
                             <p>{{item.descricao}}</p>
-                            <img src="{{item.imgUrl}}" alt="{{item.alt}}">
+                            <img class="fadeIn" src="{{item.imgUrl}}" alt="{{item.alt}}">
                         </div>
                     </div>
                 </div>

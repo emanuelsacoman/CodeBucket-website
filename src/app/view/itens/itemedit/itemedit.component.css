@@ -134,3 +134,16 @@ p, .alert {
     width: fit-content;
     padding-inline: 1%;
 }
+
+.fadeIn{
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
