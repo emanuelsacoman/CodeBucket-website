@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { Command } from 'src/app/model/interfaces/command';
 import { Home } from 'src/app/model/interfaces/home';
@@ -54,4 +54,39 @@ export class IndexComponent {
 
       
     }
+
+    @HostListener('window:scroll', ['$event'])
+onScroll(event: Event): void {
+  const listaElementsRight = document.getElementsByClassName('examplePicRight');
+  const listaElementsLeft = document.getElementsByClassName('examplePicLeft');
+  
+  // Itera sobre todos os elementos com a classe 'examplePicRight'
+  for (let i = 0; i < listaElementsRight.length; i++) {
+    const listaElementRight = listaElementsRight[i] as HTMLElement; 
+
+    if (listaElementRight) {
+      const distanciaDoTopo = listaElementRight.getBoundingClientRect().top;
+
+      if (distanciaDoTopo < window.innerHeight - 0) {
+        listaElementRight.classList.add('scroll-smoothRight');
+      }
+    }
+  }
+
+  // Itera sobre todos os elementos com a classe 'examplePicLeft'
+  for (let i = 0; i < listaElementsLeft.length; i++) {
+    const listaElementLeft = listaElementsLeft[i] as HTMLElement; 
+
+    if (listaElementLeft) {
+      const distanciaDoTopo = listaElementLeft.getBoundingClientRect().top;
+
+      if (distanciaDoTopo < window.innerHeight - 0) {
+        listaElementLeft.classList.add('scroll-smoothLeft');
+      }
+    }
+  }
+}
+
+
+
 }

@@ -188,6 +188,37 @@ a{
     padding: 2%;
 }
 
+.scroll-smoothRight {
+    animation: scrollAnimationRight 0.5s ease-in-out;
+}
+
+.scroll-smoothLeft {
+    animation: scrollAnimationLeft 0.5s ease-in-out;
+}
+
+@keyframes scrollAnimationRight {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+@keyframes scrollAnimationLeft {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+
 
 @media screen and (max-width: 740px) {
     .botImage{

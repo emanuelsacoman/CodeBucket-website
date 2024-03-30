@@ -28,6 +28,7 @@ import { OutroEditComponent } from './view/screenManager/outro-edit/outro-edit.c
 import { FooterComponent } from './view/footer/footer.component';
 import { CommandsComponent } from './view/commands/commands.component';
 import { ComandosEditComponent } from './view/screenManager/comandos-edit/comandos-edit.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { ComandosEditComponent } from './view/screenManager/comandos-edit/comand
     ComandosEditComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     provideFirebaseApp(() => initializeApp(environments.firebase)),
@@ -58,6 +60,7 @@ import { ComandosEditComponent } from './view/screenManager/comandos-edit/comand
     ReactiveFormsModule,
     AngularFireAuthModule,
     provideAuth(() => getAuth()),
+    
 
   ],
   providers: [AuthService, AuthGuard, { provide: FIREBASE_OPTIONS, useValue: environments.firebase}],
