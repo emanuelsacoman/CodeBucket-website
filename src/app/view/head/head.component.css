@@ -180,5 +180,9 @@ nav{
     .logout {
         background-color: #f6d3d3;
     }
+
+    nav {
+        padding-inline: 1%;
+    }
     
 }
