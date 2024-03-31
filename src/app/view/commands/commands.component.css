@@ -235,6 +235,17 @@ body{
     }
 }
 
+.posAbout{
+    background-color:  #504c54;
+    height: 25vh;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    top: 30px;
+    padding: 2%;
+}
+
 @media screen and (max-width: 740px) {
     .bottom {
         flex-direction: column;
