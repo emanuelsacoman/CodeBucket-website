@@ -1,8 +1,8 @@
 <body>
     <nav>
-        <div class="picstart">
+        <div class="picstart fadeIn">
             <a (click)="goBack()" class="pic fadeIn" *ngFor="let outros of this.outros;">
-                <img src="{{outros.botImg}}" alt="{{outros.alt}}">
+                <img class="fadeIn" src="{{outros.botImg}}" alt="{{outros.alt}}">
             </a>
         </div>
         <div class="itens" *ngFor="let outros of this.outros;">
