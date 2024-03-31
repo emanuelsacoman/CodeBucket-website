@@ -101,5 +101,9 @@ a{
         align-items: end;
         gap: 1vh;
     }
+
+    .footer{
+        padding-inline: 1%;
+    }
     
 }
