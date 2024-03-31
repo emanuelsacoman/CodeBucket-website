@@ -1,4 +1,4 @@
-# Bem-vindo ao Site de Apresentação do bot CodeBucket! 🤖
+# Bem-vindo ao Site de Apresentação do CodeBucket! 🤖
 
 Um site feito com o framework Angular e hospedado no Firebase, este site é meu **TCC do curso de Análise e Desenvolvimento de Sistemas** e apresentará um bot voltado para a área de programação que eu fiz! CodeBucket promete auxíliar pessoas que gostam de utilizar a platarforma Discord como um ambiente de estudos.
 
