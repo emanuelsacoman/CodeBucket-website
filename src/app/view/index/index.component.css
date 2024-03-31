@@ -209,6 +209,10 @@ a{
     animation: scrollAnimationLeft 0.5s ease-in-out;
 }
 
+.howToCommand, .codeDescription, .picExample{
+    padding-inline: 1%;
+}
+
 @keyframes scrollAnimationRight {
     from {
       opacity: 0;

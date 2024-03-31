@@ -22,21 +22,21 @@
 
         <section class="commands">      
             <article class="command" *ngFor="let item of this.comandos | slice:10:14; let i = index" [ngClass]="{'reverse-row': i % 2 != 0}">
-            <div class="howToCommand">
-                <h1 class="title">
-                <p>{{ item.nome }}</p>
-                <div *ngIf="!this.comandosLoaded" class="loading">
-                    <img src="./assets/images/spinner.gif" alt="loading-gif">
-                </div>  
-            </h1>
-            <p class="codeDescription">{{ item.descricao }}</p>
-            </div>
-            <div class="picExample">
-                <img [ngClass]="{'examplePicRight': i % 2 != 0, 'examplePicLeft': i % 2 == 0}" src="{{item.imgUrl}}" alt="{{item.alt}}">
-                <div *ngIf="!this.comandosLoaded" class="loading">
-                    <img src="./assets/images/spinner.gif" alt="loading-gif">
+                <div class="howToCommand">
+                    <h1 class="title">
+                    <p>{{ item.nome }}</p>
+                    <div *ngIf="!this.comandosLoaded" class="loading">
+                        <img src="./assets/images/spinner.gif" alt="loading-gif">
+                    </div>  
+                    </h1>
+                <p class="codeDescription">{{ item.descricao }}</p>
                 </div>
-            </div>
+                <div class="picExample">
+                    <img [ngClass]="{'examplePicRight': i % 2 != 0, 'examplePicLeft': i % 2 == 0}" src="{{item.imgUrl}}" alt="{{item.alt}}">
+                    <div *ngIf="!this.comandosLoaded" class="loading">
+                        <img src="./assets/images/spinner.gif" alt="loading-gif">
+                    </div>
+                </div>
             </article>
         </section>
         
