@@ -16,6 +16,8 @@ export class HeadComponent {
   public homes: Home[] = [];
   public foots: Footer[] = [];
 
+  public isNavOpen: boolean = false;
+
   constructor(private router: Router,
     private firebaseService: FirebaseService,
     private authService: AuthService){
@@ -48,12 +50,21 @@ export class HeadComponent {
 
   }
 
+
   isLoggedIn(): boolean {
     return this.authService.isLoggedIn;
   }
 
   logout(){
     return this.authService.deslogar();
+  }
+
+  openNav() : void {
+    this.isNavOpen = true;
+  }
+
+  closeNav() : void {
+    this.isNavOpen = false;
   }
 
   goBack(){

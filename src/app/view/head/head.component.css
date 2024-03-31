@@ -36,12 +36,12 @@ nav{
     margin: 1%;
 }
 
-.invite, .command {
+.invite, .command, .invite2, .command2 {
     text-wrap: nowrap;
     transition: color 0.2s ease;
 }
 
-.itens .invite, .command{
+.itens .invite, .command, .invite2, .command2{
     cursor: pointer;
 }
 
@@ -49,12 +49,12 @@ nav{
     color: #fff;
 }
 
-.algo{
+.algo, .algo2{
     margin: 2%;
     cursor: pointer;
 }
 
-.invite:hover, .command:hover{
+.invite:hover, .command:hover, .invite2:hover, .command2:hover{
     color: #d3be97;
 }
 
@@ -114,12 +114,78 @@ nav{
     }
 }
 
+.hamburguer{
+    display: none;
+}
+
+.hamburguerNav{
+    display: none;
+}
+
 @media screen and (max-width: 400px) {
-    .invite, .command{
+    .invite, .command, .algo{
         display: none;
     }
 
     .dropdown-content a {
         padding: 8px 12px;
+    }
+
+    .hamburguer{
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburguerNav {
+        top: 0;
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        z-index: 2;
+        display: flex; 
+        justify-content: center;
+        align-items: center; 
+        background-color: rgba(0, 0, 0, 0.308);
+    }
+    
+    .hamburguerNav ul {
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    ul a{
+        font-size: clamp(20px, 2vw, 30px);
+    }
+
+    .algo2{
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .algo2 a {
+        font-size: clamp(12px, 5vw, 20px);
+        color: black;
+        padding: clamp(5px, 5vw, 10px) clamp(10px, 5vw, 15px);
+    }
+
+    .normal {
+        background-color: #f1f1f1;
+    }
+    .logout {
+        background-color: #f6d3d3;
+    }
+    
+}
+
+@media screen and (max-width:240px){
+    .algo2 {
+        flex-direction: column;
+        gap: 1vh;
     }
 }

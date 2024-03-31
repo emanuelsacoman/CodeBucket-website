@@ -21,5 +21,24 @@
                 <a class="logout" (click)="logout()">Logout</a>
               </div>
         </div>
+        <div class="hamburguer">
+            <img src="./assets/images/menu.png" alt="menu" (click)="openNav()"/>
+        </div>
+    </nav>
+
+    <nav class="hamburguerNav" *ngIf="isNavOpen" (click)="closeNav()">
+        <ul *ngFor="let outros of this.outros;">
+            <a href="{{outros.link}}" target="_blank" class="invite2 fadeIn" *ngFor="let home of this.homes;">
+                {{home.bottext}}
+            </a>                
+            <a class="command2 fadeIn" (click)="goToCommands()" *ngFor="let foot of this.foots;">
+                {{foot.commandsRouter}}
+            </a>
+            <div class="algo2" *ngIf="isLoggedIn()">  
+                <a class="normal" (click)="goToWebmanager()">Web Manager</a>
+                <a class="normal" (click)="goToItens()">Comandos</a>
+                <a class="logout" (click)="logout()">Logout</a>
+            </div>
+        </ul>
     </nav>
 </body>
