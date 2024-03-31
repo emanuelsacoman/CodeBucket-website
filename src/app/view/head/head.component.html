@@ -21,7 +21,7 @@
                 <a class="logout" (click)="logout()">Logout</a>
               </div>
         </div>
-        <div class="hamburguer fadeIn">
+        <div class="hamburguer fadeIn" *ngIf="this.outrosLoaded">
             <img src="./assets/images/menu.png" alt="menu" (click)="openNav()"/>
         </div>
     </nav>

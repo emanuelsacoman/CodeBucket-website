@@ -17,6 +17,7 @@ export class HeadComponent {
   public foots: Footer[] = [];
 
   public isNavOpen: boolean = false;
+  public outrosLoaded = false;
 
   constructor(private router: Router,
     private firebaseService: FirebaseService,
@@ -28,6 +29,7 @@ export class HeadComponent {
             ...(outro.payload.doc.data() as any),
           } as Outro;
         });
+        this.outrosLoaded = true;
       });
 
       this.firebaseService.obterTodosHome().subscribe((res) => {
