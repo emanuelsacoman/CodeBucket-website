@@ -6,6 +6,7 @@ body{
     background-color: #403c44;
     font-family: 'Cabin', sans-serif;
     color: #fff;
+    overflow-x: hidden;
 }
 
 main {

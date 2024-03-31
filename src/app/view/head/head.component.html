@@ -26,7 +26,7 @@
         </div>
     </nav>
 
-    <nav class="hamburguerNav" *ngIf="isNavOpen" (click)="closeNav()">
+    <nav class="hamburguerNav fadeIn" *ngIf="isNavOpen" (click)="closeNav()">
         <ul *ngFor="let outros of this.outros;">
             <a href="{{outros.link}}" target="_blank" class="invite2 fadeIn" *ngFor="let home of this.homes;">
                 {{home.bottext}}

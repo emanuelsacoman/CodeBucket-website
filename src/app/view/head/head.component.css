@@ -90,10 +90,10 @@ nav{
     font-size: clamp(14px, 2vw, 20px);
 }
 
-.dropdown-content a:hover {
+.dropdown-content a:hover, .algo2 a:hover {
     background-color: #ddd;
 }
-.dropdown-content .logout:hover {
+.dropdown-content .logout:hover, .algo2 .logout:hover {
     background-color: #f6c6c6;
 }
 
@@ -161,17 +161,17 @@ nav{
     }
 
     .algo2{
-        width: 100vw;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
+        width: 100%;
+        display: block;
+        text-wrap: nowrap;
+        min-width: fit-content;
     }
 
     .algo2 a {
-        font-size: clamp(12px, 5vw, 20px);
+        font-size: clamp(12px, 4vw, 20px);
         color: black;
         padding: clamp(5px, 5vw, 10px) clamp(10px, 5vw, 15px);
+        text-decoration: none;
     }
 
     .normal {
@@ -181,11 +181,4 @@ nav{
         background-color: #f6d3d3;
     }
     
-}
-
-@media screen and (max-width:240px){
-    .algo2 {
-        flex-direction: column;
-        gap: 1vh;
-    }
 }
