@@ -97,8 +97,9 @@ a{
 .botaoText{
     cursor: pointer;
     background-color: #ffbc3c;
-    height: 8vh;
-    padding:1% 5% 1% 5%;
+    height: fit-content;
+    padding-inline: 5%;
+    padding-block: 10%;
     border-radius: 5px;
     display: flex;
     justify-content: center;
