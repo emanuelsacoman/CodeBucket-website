@@ -66,6 +66,7 @@ body{
     font-size: clamp(12px, 3vw, 18px);
     transition: all 0.2s ease;
     text-wrap: nowrap;
+    font-weight: bold;
 }
 
 .botao {

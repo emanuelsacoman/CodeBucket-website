@@ -107,6 +107,7 @@ a{
     font-size: clamp(20px, 3vw, 26px);
     transition: all 0.2s ease;
     text-wrap: nowrap;
+    font-weight: bold;
 }
 
 .textAbout .botao:hover > .botaoText{
