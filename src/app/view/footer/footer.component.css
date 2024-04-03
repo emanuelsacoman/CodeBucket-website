@@ -84,6 +84,7 @@ a{
 .botao:hover > .botaoText{
     scale: 1.01;
     filter: brightness(1.1);
+    color: #fff;
 }
 
 .fadeIn{
