@@ -12,7 +12,7 @@
         "destination": "/index.html"
       },
       {
-        "source": "/robots.txt",
+        "source": "./src/robots.txt",
         "destination": "/robots.txt"
       }
     ]
