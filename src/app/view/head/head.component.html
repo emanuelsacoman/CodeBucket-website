@@ -16,9 +16,9 @@
         <div class="algo dropdown" *ngIf="isLoggedIn()">
             <img class="dropbtn" src="https://cdn-icons-png.flaticon.com/512/2906/2906274.png" alt="Manager">
             <div class="dropdown-content">
-                <a (click)="goToWebmanager()">Web Manager</a>
-                <a (click)="goToItens()">Comandos</a>
-                <a class="logout" (click)="logout()">Logout</a>
+                <span (click)="goToWebmanager()">Web Manager</span>
+                <span (click)="goToItens()">Comandos</span>
+                <span class="logout" (click)="logout()">Logout</span>
               </div>
         </div>
         <div class="hamburguer fadeIn" *ngIf="this.outrosLoaded">
@@ -31,13 +31,13 @@
             <a href="{{outros.link}}" target="_blank" class="invite2 fadeIn" *ngFor="let home of this.homes;">
                 {{home.bottext}}
             </a>                
-            <a class="command2 fadeIn" (click)="goToCommands()" *ngFor="let foot of this.foots;">
+            <span class="command2 fadeIn" (click)="goToCommands()" *ngFor="let foot of this.foots;">
                 {{foot.commandsRouter}}
-            </a>
+            </span>
             <div class="algo2" *ngIf="isLoggedIn()">  
-                <a class="normal" (click)="goToWebmanager()">Web Manager</a>
-                <a class="normal" (click)="goToItens()">Comandos</a>
-                <a class="logout" (click)="logout()">Logout</a>
+                <span class="normal" (click)="goToWebmanager()">Web Manager</span>
+                <span class="normal" (click)="goToItens()">Comandos</span>
+                <span class="logout" (click)="logout()">Logout</span>
             </div>
         </ul>
     </nav>

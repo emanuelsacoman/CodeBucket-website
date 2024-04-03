@@ -81,7 +81,7 @@ nav{
     background-color: #f6d3d3;
 }
 
-.dropdown-content a {
+.dropdown-content span {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -90,7 +90,7 @@ nav{
     font-size: clamp(14px, 2vw, 20px);
 }
 
-.dropdown-content a:hover, .algo2 a:hover {
+.dropdown-content span:hover, .algo2 span:hover {
     background-color: #ddd;
 }
 .dropdown-content .logout:hover, .algo2 .logout:hover {
@@ -127,7 +127,7 @@ nav{
         display: none;
     }
 
-    .dropdown-content a {
+    .dropdown-content span {
         padding: 8px 12px;
     }
 
@@ -156,7 +156,7 @@ nav{
         justify-content: space-around;
     }
 
-    ul a{
+    ul span{
         font-size: clamp(20px, 2vw, 30px);
     }
 
@@ -167,7 +167,7 @@ nav{
         min-width: fit-content;
     }
 
-    .algo2 a {
+    .algo2 span {
         font-size: clamp(12px, 4vw, 20px);
         color: black;
         padding: clamp(5px, 5vw, 10px) clamp(10px, 5vw, 15px);
