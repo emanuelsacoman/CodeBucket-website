@@ -1,17 +1,17 @@
 <body>
     <nav>
         <div class="picstart fadeIn">
-            <a (click)="goBack()" class="pic fadeIn" *ngFor="let outros of this.outros;">
+            <span  (click)="goBack()" class="pic fadeIn" *ngFor="let outros of this.outros;">
                 <img class="fadeIn" src="{{outros.botImg}}" alt="{{outros.alt}}">
-            </a>
+            </span>
         </div>
         <div class="itens" *ngFor="let outros of this.outros;">
             <a href="{{outros.link}}" target="_blank" class="invite fadeIn" *ngFor="let home of this.homes;">
                 {{home.bottext}}
             </a>                
-            <a class="command fadeIn" (click)="goToCommands()" *ngFor="let foot of this.foots;">
+            <span class="command fadeIn" (click)="goToCommands()" *ngFor="let foot of this.foots;">
                 {{foot.commandsRouter}}
-            </a>
+            </span>
         </div>
         <div class="algo dropdown" *ngIf="isLoggedIn()">
             <img class="dropbtn" src="https://cdn-icons-png.flaticon.com/512/2906/2906274.png" alt="Manager">
