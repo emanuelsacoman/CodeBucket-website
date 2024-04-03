@@ -108,6 +108,7 @@ a{
     transition: all 0.2s ease;
     text-wrap: nowrap;
     font-weight: bold;
+    color: #3D333A;
 }
 
 .textAbout .botao:hover > .botaoText{
