@@ -189,10 +189,12 @@ body{
     text-wrap: nowrap;
     background-color: #ffbc3c;
     transition: all 0.1s ease-in-out;
+    color: #3D333A;
 }
 
 .buttons .button:hover{
     filter: brightness(110%);
+    color: #fff;
 }
 
 .description img {
