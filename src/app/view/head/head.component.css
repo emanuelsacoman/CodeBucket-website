@@ -122,7 +122,7 @@ nav{
     display: none;
 }
 
-@media screen and (min-width: 470px) {
+@media screen and (max-width: 470px) {
     .invite, .command, .algo{
         display: none;
     }

@@ -248,7 +248,7 @@ body{
     padding: 2%;
 }
 
-@media screen and (min-width: 740px) {
+@media screen and (max-width: 740px) {
     .bottom {
         flex-direction: column;
     }
