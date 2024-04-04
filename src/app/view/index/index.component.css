@@ -241,14 +241,14 @@ a{
   
 
 
-@media screen and (max-width: 740px) {
+@media screen and (min-width: 740px) {
     .botImage{
         display: none;
         width: 0;
     }
 
     .textAbout{
-        width: max-content;
+        width: min-content;
         transform: translateY(0px);
     }
 
@@ -260,7 +260,7 @@ a{
     }
 }
 
-@media screen and (max-width: 300px){
+@media screen and (min-width: 300px){
     .commands{
         gap: 6vh;
     }

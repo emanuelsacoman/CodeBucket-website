@@ -121,7 +121,7 @@ header{
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 500px) {
     .separatedItens{
         flex-direction: column;
     }
