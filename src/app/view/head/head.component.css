@@ -122,7 +122,7 @@ nav{
     display: none;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 470px) {
     .invite, .command, .algo{
         display: none;
     }
@@ -156,8 +156,8 @@ nav{
         justify-content: space-around;
     }
 
-    ul span{
-        font-size: clamp(20px, 2vw, 30px);
+    ul span, ul a{
+        font-size: clamp(20px, 5vw, 36px);
     }
 
     .algo2{
