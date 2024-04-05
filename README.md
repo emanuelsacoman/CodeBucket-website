@@ -50,4 +50,4 @@ Investi meu tempo para melhorar os gráficos abaixo.
 
 ![PageSpeed](./src/assets/images/pagespeed.png)
 
-**Não se esqueça de deixar uma ⭐ nesse repositório!**
+Não se esqueça de deixar uma ⭐ nesse repositório!
