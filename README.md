@@ -30,7 +30,21 @@ Esse bot tem uma ideia super nichada, o objetivo é auxiliar usuários que usam 
 
 ### 🎉 Sinta-se à vontade
 
-Aproveite o site e o open-source que esse repositório apresenta, não é nada profissional, mas acredito que é suficiente. 
+Aproveite o site e o open-source que esse repositório apresenta, não é nada profissional, mas acredito que é suficiente.
+
+### ⚡ PageSpeed: 
+
+Investi meu tempo para melhorar os gráficos abaixo.
+
+- **Desempenho:** Reflete a rapidez e eficiência da página em carregar e responder às interações do usuário, com foco na otimização de recursos para tempos de carregamento mais rápidos.
+  
+- **Acessibilidade:** Avalia a capacidade da página de ser acessível a todos os usuários, incluindo aqueles com deficiências, garantindo práticas de codificação adequadas e facilitando a navegação por tecnologias assistivas.
+
+- **Práticas Recomendadas:** Indica se a página segue as melhores práticas de desenvolvimento da web, incluindo a estrutura semântica, a eliminação de conteúdo duplicado e o uso correto de tags HTML para melhor compreensão por parte dos motores de busca e tecnologias assistivas.
+
+- **SEO (Search Engine Optimization):** Reflete a capacidade da página de ser indexada e classificada pelos motores de busca, incluindo otimização de meta tags, URLs amigáveis e criação de conteúdo relevante para uma melhor visibilidade nos resultados de busca.
+
+![PageSpeed](./src/assets/images/pagespeed.png)
 
 > [Adicione o bot!](https://codebucketweb.web.app)
 
