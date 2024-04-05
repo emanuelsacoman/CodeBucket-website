@@ -32,6 +32,10 @@ Esse bot tem uma ideia super nichada, o objetivo é auxiliar usuários que usam 
 
 Aproveite o site e o open-source que esse repositório apresenta, não é nada profissional, mas acredito que é suficiente.
 
+> [Adicione o bot!](https://codebucketweb.web.app)
+
+![CodeBucket](./src/assets/images/codebucket.png)
+
 ### ⚡ PageSpeed: 
 
 Investi meu tempo para melhorar os gráficos abaixo.
@@ -46,8 +50,4 @@ Investi meu tempo para melhorar os gráficos abaixo.
 
 ![PageSpeed](./src/assets/images/pagespeed.png)
 
-> [Adicione o bot!](https://codebucketweb.web.app)
-
-![CodeBucket](./src/assets/images/codebucket.png)
-
-Não se esqueça de deixar uma ⭐ nesse repositório!
+**Não se esqueça de deixar uma ⭐ nesse repositório!**
