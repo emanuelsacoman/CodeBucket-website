@@ -9,16 +9,16 @@
                         <img src="https://cdn-icons-png.flaticon.com/512/561/561188.png" alt="Email" class="pic">
                     </div>
                     <input type="email" id="email" class="item" placeholder="Insira seu e-mail" formControlName="email" required />
-                    <p *ngIf="isInvalidControl('email')">Erro no e-mail</p>
                 </div>
+                <p *ngIf="isInvalidControl('email')">Erro no e-mail</p>
                 <br>
                 <div class="form-group">
                     <div class="picSpace">
                         <img src="https://www.svgrepo.com/show/84319/password.svg" alt="Senha" class="pic">
                     </div>
                     <input type="password" id="senha" class="item" placeholder="Insira sua senha" formControlName="senha" required />
-                    <p *ngIf="isInvalidControl('senha')">Erro na senha</p>
                 </div>
+                <p *ngIf="isInvalidControl('senha')">Erro na senha</p>
                 <br>
                 <div *ngIf="loginError" class="alert alert-danger">{{ loginError }}</div>
                 <button class="sendButton" type="submit" (click)="submit()">Enviar</button>
