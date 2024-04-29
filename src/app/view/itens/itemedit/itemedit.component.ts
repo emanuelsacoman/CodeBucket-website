@@ -73,8 +73,11 @@ export class ItemeditComponent implements OnInit{
   }
 
   delete(){
-    this.firebase.excluir(this.comando.id).then(() => {
-        this.router.navigate(['/itemlist']);
-      });
+    const confirmDelete = window.confirm('Tem certeza de que deseja excluir este item?');
+    if(confirmDelete){
+      this.firebase.excluir(this.comando.id).then(() => {
+          this.router.navigate(['/itemlist']);
+        });
+    }
   }
 }
