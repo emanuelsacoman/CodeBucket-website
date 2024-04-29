@@ -7,21 +7,21 @@ Um site feito com o framework Angular e hospedado no Firebase, este site é meu 
 **Telas que usuários comuns têm acesso:**
 - **[HOME](https://codebucketweb.web.app):** A tela principal, onde, para usuários comuns, há tudo necessário para adicionar o bot e entender para que serve.
 - **[COMANDOS](https://codebucketweb.web.app/comandos):** Aqui você encontrará todos os comandos que o bot apresenta.
-- **[LOGIN](#login):** Apenas eu tenho o login e isso me levará para o modo admin.
+- **[LOGIN](https://codebucketweb.web.app/login):** Apenas eu tenho o login e isso me levará para o modo admin.
 
 **Telas de admin:**
-- **[WEB MANAGER](#web-manager):** Essa tela apresentará CRUDs de todo o site, onde eu posso escolher qual página eu quero editar.
+- **[WEB MANAGER](https://codebucketweb.web.app/webmanager):** Essa tela apresentará CRUDs de todo o site, onde eu posso escolher qual página eu quero editar.
   - **Configurações Gerais**
     - Opções de configuração geral do site.
   - **Páginas do Site**
-    - **[HOME PAGE](#home-page):** CRUD para edição da tela principal.
-    - **[COMANDOS PAGE](#comandos-page):** CRUD para edição da tela de comandos.
-    - **[FOOTER](#footer):** CRUD para edição do footer do site.
-    - **[OUTRO](#outro):** CRUD para outras informações do site, como link do bot ou ícone do mesmo.
+    - **[HOME PAGE](https://codebucketweb.web.app/homeedit):** CRUD para edição da tela principal.
+    - **[COMANDOS PAGE](https://codebucketweb.web.app/comandosedit):** CRUD para edição da tela de comandos.
+    - **[FOOTER](https://codebucketweb.web.app/footer):** CRUD para edição do footer do site.
+    - **[OUTRO](https://codebucketweb.web.app/outro):** CRUD para outras informações do site, como link do bot ou ícone do mesmo.
 - **Comandos do Bot:**
-  - **[LISTA DE COMANDOS](#lista-de-comandos):** Aqui está sendo listado todos os comandos que o bot apresenta.
-  - **[EDITAR COMANDO](#editar-comando):** CRUD para edição de algum comando específico.
-  - **[CRIAR COMANDO](#criar-comando):** CRUD para criar um comando novo.
+  - **[LISTA DE COMANDOS](https://codebucketweb.web.app/itemlist):** Aqui está sendo listado todos os comandos que o bot apresenta.
+  - **[EDITAR COMANDO](https://codebucketweb.web.app/itemedit):** CRUD para edição de algum comando específico.
+  - **[CRIAR COMANDO](https://codebucketweb.web.app/itemcreate):** CRUD para criar um comando novo.
 
 
 ### 👨‍💻 Sobre o Bot:
