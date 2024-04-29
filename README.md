@@ -7,7 +7,7 @@ Um site feito com o framework Angular e hospedado no Firebase, este site é meu 
 **Telas que usuários comuns têm acesso:**
 - **[HOME](https://codebucketweb.web.app):** A tela principal, onde, para usuários comuns, há tudo necessário para adicionar o bot e entender para que serve.
 - **[COMANDOS](https://codebucketweb.web.app/comandos):** Aqui você encontrará todos os comandos que o bot apresenta.
-- **[LOGIN](https://codebucketweb.web.app/login):** Apenas eu tenho o login e isso me levará para o modo admin.
+- **[LOGIN](https://codebucketweb.web.app/login):** O login levará para o modo admin, onde pode ser feito manutenção do site.
 
 **Telas de admin:**
 - **[WEB MANAGER](https://codebucketweb.web.app/webmanager):** Essa tela apresentará CRUDs de todo o site, onde eu posso escolher qual página eu quero editar.
