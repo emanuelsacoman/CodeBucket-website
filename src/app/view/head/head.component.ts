@@ -57,8 +57,11 @@ export class HeadComponent {
     return this.authService.isLoggedIn;
   }
 
-  logout(){
-    return this.authService.deslogar();
+  logout(): void{
+    const confirmLogout = window.confirm('Tem certeza de que deseja deslogar?');
+    if(confirmLogout){
+      this.authService.deslogar();
+    }
   }
 
   openNav() : void {
