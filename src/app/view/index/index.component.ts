@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { Command } from 'src/app/model/interfaces/command';
 import { Home } from 'src/app/model/interfaces/home';
@@ -18,8 +19,11 @@ export class IndexComponent {
   public homesLoaded = false;
   public outrosLoaded = false;
 
+  title = 'Descubra o melhor bot para estudar programação no Discord!';
+
   constructor(private router: Router,
-    private firebaseService: FirebaseService){
+    private firebaseService: FirebaseService,
+    private titleService: Title){
       this.firebaseService.obterTodos().subscribe((res) => {
         this.comandos = res.map((comando) => {
           return {
@@ -54,6 +58,11 @@ export class IndexComponent {
 
       
     }
+
+    setDocTitle(title: string) {
+      console.log('current title:::::' + this.titleService.getTitle());
+      this.titleService.setTitle(title);
+   }
 
     @HostListener('window:scroll', ['$event'])
 onScroll(event: Event): void {

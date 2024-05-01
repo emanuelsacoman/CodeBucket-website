@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IndexComponent } from './view/index/index.component';
@@ -63,7 +63,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     
 
   ],
-  providers: [AuthService, AuthGuard, { provide: FIREBASE_OPTIONS, useValue: environments.firebase}],
+  providers: [AuthService, Title, AuthGuard, { provide: FIREBASE_OPTIONS, useValue: environments.firebase}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

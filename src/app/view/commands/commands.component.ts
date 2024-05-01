@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { ComandosEdit } from 'src/app/model/interfaces/comandos';
 import { Command } from 'src/app/model/interfaces/command';
@@ -20,8 +21,11 @@ export class CommandsComponent {
 
   searchTerm: string = '';
 
+  title = 'Aprenda todas as funcionalidades dessa ferramenta incrível!';
+
   constructor(private router: Router,
-    private firebaseService: FirebaseService){
+    private firebaseService: FirebaseService,
+    private titleService: Title){
       this.firebaseService.obterTodos().subscribe((res) => {
         this.comandos = res.map((comando) => {
           return {
@@ -43,6 +47,11 @@ export class CommandsComponent {
         this.comandosLoaded2 = true;
       });
     }
+
+    setDocTitle(title: string) {
+      console.log('current title:::::' + this.titleService.getTitle());
+      this.titleService.setTitle(title);
+   }
 
     showDescription(command: Command){
       this.comandos.forEach(item => {

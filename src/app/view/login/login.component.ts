@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/model/services/auth.service';
 import { User } from 'src/app/model/interfaces/user';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-login',
@@ -13,10 +14,13 @@ export class LoginComponent implements OnInit {
 
   userForm!: FormGroup;
   loginError: string | null = null;
+
+  title = 'Faça login';
   
   constructor(private router: Router,
     private formBuilder: FormBuilder,
-    private authService: AuthService){
+    private authService: AuthService,
+    private titleService: Title){
   }
   ngOnInit(): void {
     this.userForm = new FormGroup({
@@ -44,4 +48,9 @@ export class LoginComponent implements OnInit {
     const control = this.userForm.get(controlName);
     return control && control.invalid && (control.dirty || control.touched);
   }
+
+  setDocTitle(title: string) {
+    console.log('current title:::::' + this.titleService.getTitle());
+    this.titleService.setTitle(title);
+ }
 }
