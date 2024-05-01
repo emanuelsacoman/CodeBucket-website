@@ -41,7 +41,7 @@ body{
 .bottom {
     display: flex;
     flex-direction: row;
-    align-items: start;
+    align-items: flex-start;
     gap: 3vh;
     margin: 2%;
 }
@@ -78,7 +78,7 @@ body{
 .search-container{
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
     position: relative;
     height: fit-content;
@@ -146,7 +146,7 @@ body{
 .descriptionItens {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     gap: 2vh;
 }
 
@@ -162,7 +162,7 @@ body{
     height: 90vh;
     width: 100%;
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
 }
 
