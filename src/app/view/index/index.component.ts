@@ -19,7 +19,7 @@ export class IndexComponent {
   public homesLoaded = false;
   public outrosLoaded = false;
 
-  title = 'Descubra o melhor bot para estudar programação no Discord!';
+  title = 'CodeBucket!';
 
   constructor(private router: Router,
     private firebaseService: FirebaseService,
@@ -56,7 +56,7 @@ export class IndexComponent {
         this.outrosLoaded = true;
       });
 
-      
+      this.setDocTitle(this.title)
     }
 
     setDocTitle(title: string) {

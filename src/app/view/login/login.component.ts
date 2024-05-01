@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
     private formBuilder: FormBuilder,
     private authService: AuthService,
     private titleService: Title){
+      this.setDocTitle(this.title)
   }
   ngOnInit(): void {
     this.userForm = new FormGroup({

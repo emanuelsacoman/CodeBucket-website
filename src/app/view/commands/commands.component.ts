@@ -21,7 +21,7 @@ export class CommandsComponent {
 
   searchTerm: string = '';
 
-  title = 'Aprenda todas as funcionalidades dessa ferramenta incrível!';
+  title = 'Comandos do CodeBucket!';
 
   constructor(private router: Router,
     private firebaseService: FirebaseService,
@@ -46,6 +46,8 @@ export class CommandsComponent {
         });
         this.comandosLoaded2 = true;
       });
+
+      this.setDocTitle(this.title)
     }
 
     setDocTitle(title: string) {
