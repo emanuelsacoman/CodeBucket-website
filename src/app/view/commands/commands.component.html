@@ -10,7 +10,7 @@
         <div class="bottom">
             
             <div class="search-container fadeIn" *ngFor="let comandos of this.comandos2;">
-                <h1>{{comandos.search}}</h1>
+                <div class="comandosearch">{{comandos.search}}</div>
                 <form>
                   <input type="text" placeholder="{{comandos.placeholder}}" (input)="search($event)">
                 </form>

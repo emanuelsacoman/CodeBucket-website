@@ -148,6 +148,7 @@ a{
 .title {
     color: #ffbc3c;
     font-size: clamp(24px, 5vw, 40px);
+    font-weight: bold;
 }
 
 .codeDescription{
