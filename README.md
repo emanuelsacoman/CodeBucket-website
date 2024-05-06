@@ -33,6 +33,7 @@ Esse bot tem uma ideia super nichada, o objetivo é auxiliar usuários que usam 
 Aproveite o site e o open-source que esse repositório apresenta, não é nada profissional, mas acredito que é suficiente.
 
 > [Adicione o bot!](https://codebucketweb.web.app)
+
 > [Repositório do bot!](https://github.com/emanuelsacoman/Bot-Estudos-Discord)
 
 ![CodeBucket](./src/assets/images/codebucket.png)
