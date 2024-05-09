@@ -19,7 +19,7 @@ export class IndexComponent {
   public homesLoaded = false;
   public outrosLoaded = false;
 
-  title = 'CodeBucket!';
+  title = 'CodeBucket';
 
   constructor(private router: Router,
     private firebaseService: FirebaseService,

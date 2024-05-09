@@ -21,7 +21,7 @@ export class CommandsComponent {
 
   searchTerm: string = '';
 
-  title = 'Comandos do CodeBucket!';
+  title = 'Comandos do CodeBucket';
 
   constructor(private router: Router,
     private firebaseService: FirebaseService,
