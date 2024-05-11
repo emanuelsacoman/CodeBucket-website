@@ -50,6 +50,6 @@ Investi meu tempo para melhorar os gráficos abaixo.
 
 - **SEO (Search Engine Optimization):** Reflete a capacidade da página de ser indexada e classificada pelos motores de busca, incluindo otimização de meta tags, URLs amigáveis e criação de conteúdo relevante para uma melhor visibilidade nos resultados de busca.
 
-![PageSpeed](./src/assets/images/pagespeed.png)
+![PageSpeed](./src/assets/images/pagespeed2.png)
 
 Não se esqueça de deixar uma ⭐ nesse repositório!
