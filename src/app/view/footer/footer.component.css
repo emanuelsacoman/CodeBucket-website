@@ -100,6 +100,11 @@ a{
     }
 }
 
+.topgg img{
+    width: clamp(30px, 20vw, 100px);
+    height: auto;
+}
+
 @media screen and (max-width: 470px) {
     .right{
         align-items: end;
