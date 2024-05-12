@@ -38,7 +38,7 @@ Aproveite o site e o open-source que esse repositório apresenta, não é nada p
 
 ![CodeBucket](./src/assets/images/codebucket.png)
 
-![Discord Bots](https://top.gg/api/widget/upvotes/1193011045577523300.svg)
+[![Discord Bots](https://top.gg/api/widget/upvotes/1193011045577523300.svg)](https://top.gg/bot/1193011045577523300)
 
 ### ⚡ PageSpeed: 
 
