@@ -34,6 +34,7 @@ export class IndexComponent {
         this.comandos = this.comandos.filter(item => item.nome !== 'Invite');
         this.comandos = this.comandos.filter(item => item.nome !== 'Servercount');
         this.comandos = this.comandos.filter(item => item.nome !== 'Vote');
+        this.comandos = this.comandos.filter(item => item.nome !== 'Count');
         this.comandosLoaded = true;
       });
 
