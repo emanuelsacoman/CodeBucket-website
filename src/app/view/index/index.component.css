@@ -204,6 +204,11 @@ a{
     top: -1px;
 }
 
+.svg2{
+    position: relative;
+    bottom: -5px;
+}
+
 .scroll-smoothRight {
     animation: scrollAnimationRight 0.5s ease-in-out;
 }
