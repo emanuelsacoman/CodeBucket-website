@@ -197,13 +197,11 @@ a{
 
 .posAbout{
     background-color:  #504c54;
-    height: 25vh;
-    width: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    top: 30px;
-    padding: 2%;
+}
+
+.svg{
+    position: relative;
+    top: -1px;
 }
 
 .scroll-smoothRight {
