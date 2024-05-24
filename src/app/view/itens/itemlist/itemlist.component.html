@@ -3,7 +3,7 @@
         <header>
             <p class="titulo fadeIn">LISTA DE ITENS</p>
         </header>
-        <div class="item fadeIn" *ngFor="let comando of this.comandos; let i = index">
+        <div class="item fadeIn" *ngFor="let comando of comandos; let i = index">
             <div class="values fadeIn" (click)="editar(comando)">
                 <div class="separatedItens left fadeIn">
                     <p class="nome fadeIn">{{comando.nome}}</p>

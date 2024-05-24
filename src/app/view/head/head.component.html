@@ -1,15 +1,15 @@
 <body>
     <nav>
         <div class="picstart fadeIn">
-            <span  (click)="goBack()" class="pic fadeIn" *ngFor="let outros of this.outros;">
+            <span  (click)="goBack()" class="pic fadeIn" *ngFor="let outros of outros;">
                 <img class="fadeIn" src="{{outros.botImg}}" alt="{{outros.alt}}">
             </span>
         </div>
-        <div class="itens" *ngFor="let outros of this.outros;">
-            <a href="{{outros.link}}" target="_blank" class="invite fadeIn" *ngFor="let home of this.homes;">
+        <div class="itens" *ngFor="let outros of outros;">
+            <a href="{{outros.link}}" target="_blank" class="invite fadeIn" *ngFor="let home of homes;">
                 {{home.bottext}}
             </a>                
-            <span class="command fadeIn" (click)="goToCommands()" *ngFor="let foot of this.foots;">
+            <span class="command fadeIn" (click)="goToCommands()" *ngFor="let foot of foots;">
                 {{foot.commandsRouter}}
             </span>
         </div>
@@ -21,17 +21,17 @@
                 <span class="logout" (click)="logout()">Logout</span>
               </div>
         </div>
-        <div class="hamburguer fadeIn" *ngIf="this.outrosLoaded">
+        <div class="hamburguer fadeIn" *ngIf="outrosLoaded">
             <img src="./assets/images/menu.png" alt="menu" (click)="openNav()"/>
         </div>
     </nav>
 
     <nav class="hamburguerNav fadeIn" *ngIf="isNavOpen" (click)="closeNav()">
-        <ul *ngFor="let outros of this.outros;">
-            <a href="{{outros.link}}" target="_blank" class="invite2 fadeIn" *ngFor="let home of this.homes;">
+        <ul *ngFor="let outros of outros;">
+            <a href="{{outros.link}}" target="_blank" class="invite2 fadeIn" *ngFor="let home of homes;">
                 {{home.bottext}}
             </a>                
-            <span class="command2 fadeIn" (click)="goToCommands()" *ngFor="let foot of this.foots;">
+            <span class="command2 fadeIn" (click)="goToCommands()" *ngFor="let foot of foots;">
                 {{foot.commandsRouter}}
             </span>
             <div class="algo2" *ngIf="isLoggedIn()">  

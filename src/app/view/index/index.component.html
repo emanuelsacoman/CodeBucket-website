@@ -4,22 +4,22 @@
 
 <body>
     <main>
-        <div *ngIf="!this.homesLoaded" class="loading">
+        <div *ngIf="!homesLoaded" class="loading">
             <img src="./assets/images/spinner.gif" alt="loading-gif">
         </div>
         <section class="about">
             <article class="textAbout">
-                <h1 class="fadeIn" *ngFor="let home of this.homes;">{{home.title}}</h1>
-                <p class="description fadeIn" *ngFor="let home of this.homes;">
+                <h1 class="fadeIn" *ngFor="let home of homes;">{{home.title}}</h1>
+                <p class="description fadeIn" *ngFor="let home of homes;">
                     {{home.description}}
                 </p>
-                <div class="botao fadeIn" *ngFor="let outros of this.outros;">
-                    <a href="{{outros.link}}" target="_blank" class="botaoText" *ngFor="let home of this.homes;">
+                <div class="botao fadeIn" *ngFor="let outros of outros;">
+                    <a href="{{outros.link}}" target="_blank" class="botaoText" *ngFor="let home of homes;">
                         {{home.bottext}}
                     </a>                    
                 </div>
             </article>
-            <article class="botImage fadeIn" *ngFor="let outros of this.outros;">
+            <article class="botImage fadeIn" *ngFor="let outros of outros;">
                 <img src="{{outros.botImg}}" alt="{{outros.alt}}">
             </article>
         </section>
@@ -35,7 +35,7 @@
                 <div class="howToCommand">
                     <div class="title">
                     <p>{{ item.nome }}</p>
-                    <div *ngIf="!this.comandosLoaded" class="loading">
+                    <div *ngIf="!comandosLoaded" class="loading">
                         <img src="./assets/images/spinner.gif" alt="loading-gif">
                     </div>  
                     </div>
@@ -43,7 +43,7 @@
                 </div>
                 <div class="picExample">
                     <img [ngClass]="{'examplePicRight': i % 2 != 0, 'examplePicLeft': i % 2 == 0}" src="{{item.imgUrl}}" alt="{{item.alt}}">
-                    <div *ngIf="!this.comandosLoaded" class="loading">
+                    <div *ngIf="!comandosLoaded" class="loading">
                         <img src="./assets/images/spinner.gif" alt="loading-gif">
                     </div>
                 </div>

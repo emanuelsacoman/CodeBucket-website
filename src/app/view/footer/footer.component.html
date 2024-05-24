@@ -1,21 +1,21 @@
 <body>
     <section class="footer">
-        <div class="left fadeIn" *ngFor="let foot of this.foots;">
+        <div class="left fadeIn" *ngFor="let foot of foots;">
             <div class="topfooter">
-                <h1 *ngFor="let home of this.homes;">{{home.title}}</h1>
+                <h1 *ngFor="let home of homes;">{{home.title}}</h1>
                 <p>{{foot.miniD}}</p>
             </div>
             <div class="bottomfooter">
                 <p>{{foot.rights}}</p>
                 <p>{{foot.afiliated}}</p>
             </div>
-            <div class="botao" *ngFor="let outros of this.outros;">
-                <a href="{{outros.link}}" target="_blank" class="botaoText" *ngFor="let home of this.homes;">
+            <div class="botao" *ngFor="let outros of outros;">
+                <a href="{{outros.link}}" target="_blank" class="botaoText" *ngFor="let home of homes;">
                     {{home.bottext}}
                 </a>                    
             </div>
         </div>
-        <div class="right fadeIn" *ngFor="let foot of this.foots;">
+        <div class="right fadeIn" *ngFor="let foot of foots;">
             <p (click)="goToHome()">{{foot.homeRouter}}</p>
             <p (click)="goToCommands()">{{foot.commandsRouter}}</p>
             <a class="topgg" href="https://top.gg/bot/1193011045577523300">

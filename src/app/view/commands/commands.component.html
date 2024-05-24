@@ -4,16 +4,16 @@
 
 <body>
     <section class="all">
-        <div *ngIf="!this.comandosLoaded2" class="loading">
+        <div *ngIf="!comandosLoaded2" class="loading">
             <img src="./assets/images/spinner.gif" alt="loading-gif">
         </div> 
-        <div class="info fadeIn" *ngFor="let comandos of this.comandos2;">
+        <div class="info fadeIn" *ngFor="let comandos of comandos2;">
            <h1>{{comandos.title}}</h1>
            <p>{{comandos.description}}</p>
         </div>
         <div class="bottom">
             
-            <div class="search-container fadeIn" *ngFor="let comandos of this.comandos2;">
+            <div class="search-container fadeIn" *ngFor="let comandos of comandos2;">
                 <div class="comandosearch">{{comandos.search}}</div>
                 <form>
                   <input type="text" placeholder="{{comandos.placeholder}}" (input)="search($event)">
@@ -25,10 +25,10 @@
               </div>
 
             <div class="commands">
-                <div class="box fadeInRight" *ngFor="let item of this.comandToShow; let i = index" (click)="showDescription(item)">
+                <div class="box fadeInRight" *ngFor="let item of comandToShow; let i = index" (click)="showDescription(item)">
                     <div class="title">
                         <div class="left">
-                            <div class="imagem" *ngFor="let comandos of this.comandos2;">
+                            <div class="imagem" *ngFor="let comandos of comandos2;">
                                 <img src="{{comandos.dropImg}}" alt="Down Arrow">
                             </div>
                             <h3 class="commandname">{{item.nome}}</h3>

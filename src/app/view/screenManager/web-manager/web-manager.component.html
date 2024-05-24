@@ -1,18 +1,18 @@
 <body>
     <section class="all fadeIn">
-        <div *ngIf="!this.homesLoaded || !this.footsLoaded || !this.outrosLoaded || !this.comandosLoaded" class="loading">
+        <div *ngIf="!homesLoaded || !footsLoaded || !outrosLoaded || !comandosLoaded" class="loading">
             <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="loading-gif">
         </div>  
-        <div class="comandos container" *ngFor="let comando of this.comandos; let i = index" (click)="goToComandosEdit(comando)">
+        <div class="comandos container" *ngFor="let comando of comandos; let i = index" (click)="goToComandosEdit(comando)">
             <h1>COMANDOS PAGE</h1>
         </div>
-        <div class="home container" *ngFor="let home of this.homes; let i = index" (click)="goToHomeEdit(home)">
+        <div class="home container" *ngFor="let home of homes; let i = index" (click)="goToHomeEdit(home)">
             <H1>HOME PAGE</H1>
         </div>
-        <div class="foot container" *ngFor="let foot of this.foots; let k = index" (click)="goToFooterEdit(foot)">
+        <div class="foot container" *ngFor="let foot of foots; let k = index" (click)="goToFooterEdit(foot)">
             <H1>FOOTER</H1>
         </div>
-        <div class="outro container" *ngFor="let outro of this.outros; let j = index" (click)="goToOutroEdit(outro)">
+        <div class="outro container" *ngFor="let outro of outros; let j = index" (click)="goToOutroEdit(outro)">
             <H1>OUTRO</H1> 
         </div>
     </section>
