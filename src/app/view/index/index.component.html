@@ -1,7 +1,5 @@
 <head>
     <meta name="description" content="Descubra o melhor bot para estudar programação no Discord!">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3537716490214815"
-     crossorigin="anonymous"></script>
   </head>
 
 <body>
@@ -33,7 +31,7 @@
         </section>           
 
         <section class="commands">      
-            <article class="command" *ngFor="let item of this.comandos | slice:10:14; let i = index" [ngClass]="{'reverse-row': i % 2 != 0}">
+            <article class="command" *ngFor="let item of comandos | slice:10:14; let i = index" [ngClass]="{'reverse-row': i % 2 != 0}">
                 <div class="howToCommand">
                     <div class="title">
                     <p>{{ item.nome }}</p>
