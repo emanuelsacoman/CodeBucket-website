@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
   userForm!: FormGroup;
   loginError: string | null = null;
 
-  title = 'Faça login';
+  title = 'CodeBucket | Login';
   
   constructor(private router: Router,
     private formBuilder: FormBuilder,
