@@ -64,7 +64,7 @@ export class HeadComponent {
     if (confirmLogout) {
         this.authService.deslogar()
             .then(() => {
-                this.router.navigate(['/']);
+                this.router.navigate(['']);
                 this.toast.success({
                     detail: "Sucesso!",
                     summary: "Desconectado com sucesso",
