@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgToastService } from 'ng-angular-popup';
 import { Footer } from 'src/app/model/interfaces/footer';
 import { Home } from 'src/app/model/interfaces/home';
 import { FirebaseService } from 'src/app/model/services/firebase.service';
@@ -22,7 +23,8 @@ export class FooterEditComponent {
 
   constructor(private router: Router,
     private formBuilder: FormBuilder,
-    private firebase: FirebaseService){
+    private firebase: FirebaseService,
+    private toast: NgToastService){
 
   }
 
@@ -46,15 +48,38 @@ export class FooterEditComponent {
   }
 
   editItem() {
-    if (this.footerEdit.valid){
-      const new_part: Footer = {...this.footerEdit.value,id: this.foot.id};
-        this.firebase.editarFooter(new_part, this.foot.id).then(() => this.router.navigate(['/webmanager'])).catch((error) =>{
-          console.log(error);
+    if (this.footerEdit.valid) {
+        const new_part: Footer = {
+            ...this.footerEdit.value,
+            id: this.foot.id
+        };
+
+        this.firebase.editarFooter(new_part, this.foot.id)
+            .then(() => {
+                this.router.navigate(['/webmanager']);
+                this.toast.success({
+                    detail: "Sucesso!",
+                    summary: "Atualização Concluída",
+                    duration: 5000
+                });
+            })
+            .catch((error) => {
+                console.error('Error updating footer:', error);
+                this.toast.error({
+                    detail: "Erro",
+                    summary: "Falha ao atualizar o rodapé.",
+                    duration: 5000
+                });
+            });
+    } else {
+        this.toast.error({
+            detail: "Erro",
+            summary: "Campos obrigatórios!",
+            duration: 5000
         });
-      }else{
-      window.alert('Campos obrigatorios!');
     }
   }
+
 
   isInvalidControl(controlName: string) {
     const control = this.footerEdit.get(controlName);

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgToastService } from 'ng-angular-popup';
 import { Command } from 'src/app/model/interfaces/command';
 import { FirebaseService } from 'src/app/model/services/firebase.service';
 
@@ -15,7 +16,8 @@ export class ItemcreateComponent {
 
   constructor(private router: Router,
     private formBuilder: FormBuilder,
-    private firebase: FirebaseService){
+    private firebase: FirebaseService,
+    private toast: NgToastService){
       this.itemForm = this.formBuilder.group({
         nome: new FormControl(''),
         descricao: new FormControl(''),
@@ -47,32 +49,50 @@ export class ItemcreateComponent {
 
   cadastro() {
     if (this.itemForm.valid) {
-      const { nome, descricao, imagem, alt, cooldown } = this.itemForm.value;
-      const create: Command = new Command(nome, descricao, imagem, alt, cooldown);
+        const { nome, descricao, imagem, alt, cooldown } = this.itemForm.value;
+        const create: Command = new Command(nome, descricao, imagem, alt, cooldown);
 
-      if (imagem) {
-        this.firebase.uploadImage(imagem, create)
-          ?.then(() => {
+        const navigateAndToastSuccess = () => {
             this.router.navigate(['/itemlist']);
-          })
-          .catch((error) => {
-            console.log(error);
-            window.alert('Erro ao salvar imagem');
-          });
-      } else {
-        this.firebase.cadastrar(create)
-          .then(() => {
-            this.router.navigate(['/itemlist']);
-          })
-          .catch((error) => {
-            console.log(error);
-            window.alert('Erro');
-          });
-      }
+            this.toast.success({
+                detail: "Sucesso!",
+                summary: "Item cadastrado com sucesso.",
+                duration: 5000
+            });
+        };
+
+        if (imagem) {
+            this.firebase.uploadImage(imagem, create)
+                ?.then(navigateAndToastSuccess)
+                .catch((error) => {
+                    console.error('Error uploading image:', error);
+                    this.toast.error({
+                        detail: "Erro!",
+                        summary: "Falha ao salvar imagem.",
+                        duration: 5000
+                    });
+                });
+        } else {
+            this.firebase.cadastrar(create)
+                .then(navigateAndToastSuccess)
+                .catch((error) => {
+                    console.error('Error registering item:', error);
+                    this.toast.error({
+                        detail: "Erro",
+                        summary: "Falha ao cadastrar o item.",
+                        duration: 5000
+                    });
+                });
+        }
     } else {
-      window.alert('Preencha todos os campos');
+        this.toast.error({
+            detail: "Erro",
+            summary: "Preencha todos os campos!",
+            duration: 5000
+        });
     }
   }
+
 
   isInvalidControl(controlName: string) {
     const control = this.itemForm.get(controlName);

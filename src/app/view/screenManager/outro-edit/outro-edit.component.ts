@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgToastService } from 'ng-angular-popup';
 import { Outro } from 'src/app/model/interfaces/outro';
 import { FirebaseService } from 'src/app/model/services/firebase.service';
 
@@ -19,7 +20,8 @@ export class OutroEditComponent {
 
   constructor(private router: Router,
     private formBuilder: FormBuilder,
-    private firebase: FirebaseService){
+    private firebase: FirebaseService,
+    private toast: NgToastService){
 
   }
 
@@ -38,24 +40,56 @@ export class OutroEditComponent {
   }
 
   editItem() {
-    if (this.outroEdit.valid){
-      const new_part: Outro = {...this.outroEdit.value,id: this.outro.id,botImg: this.outro.botImg};
+    if (this.outroEdit.valid) {
+        const new_part: Outro = {
+            ...this.outroEdit.value,
+            id: this.outro.id,
+            botImg: this.outro.botImg
+        };
 
-      if (this.imagem) {
-        this.firebase.uploadImageOutro(this.imagem, new_part)?.then(() =>{
-          this.router.navigate(['/webmanager'])
-        });
-      }else{
-        new_part.botImg = this.outro.botImg;
+        const navigateAndToastSuccess = () => {
+            this.router.navigate(['/webmanager']);
+            this.toast.success({
+                detail: "Sucesso!",
+                summary: "Atualização Concluída",
+                duration: 5000
+            });
+        };
 
-        this.firebase.editarOutro(new_part, this.outro.id).then(() => this.router.navigate(['/webmanager'])).catch((error) =>{
-          console.log(error);
+        if (this.imagem) {
+            this.firebase.uploadImageOutro(this.imagem, new_part)
+                ?.then(navigateAndToastSuccess)
+                .catch((error) => {
+                    console.error('Error uploading image:', error);
+                    this.toast.error({
+                        detail: "Erro",
+                        summary: "Falha ao atualizar imagem.",
+                        duration: 5000
+                    });
+                });
+        } else {
+            new_part.botImg = this.outro.botImg;
+
+            this.firebase.editarOutro(new_part, this.outro.id)
+                .then(navigateAndToastSuccess)
+                .catch((error) => {
+                    console.error('Error updating outro:', error);
+                    this.toast.error({
+                        detail: "Erro",
+                        summary: "Falha ao atualizar.",
+                        duration: 5000
+                    });
+                });
+        }
+    } else {
+        this.toast.error({
+            detail: "Erro",
+            summary: "Campos obrigatórios!",
+            duration: 5000
         });
-      }
-    }else{
-      window.alert('Campos obrigatorios!');
     }
   }
+
 
   uploadFile(event: any){
     this.imagem = event.target.files;

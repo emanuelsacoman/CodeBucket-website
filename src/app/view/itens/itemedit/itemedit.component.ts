@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgToastService } from 'ng-angular-popup';
 import { Command } from 'src/app/model/interfaces/command';
 import { FirebaseService } from 'src/app/model/services/firebase.service';
 
@@ -21,7 +22,8 @@ export class ItemeditComponent implements OnInit{
 
   constructor(private router: Router,
     private formBuilder: FormBuilder,
-    private firebase: FirebaseService){
+    private firebase: FirebaseService,
+    private toast: NgToastService){
 
   }
 
@@ -44,24 +46,48 @@ export class ItemeditComponent implements OnInit{
   }
 
   editItem() {
-    if (this.editar.valid){
-      const new_part: Command = {...this.editar.value,id: this.comando.id,imgUrl: this.comando.imgUrl};
+    if (this.editar.valid) {
+        const new_part: Command = {
+            ...this.editar.value,
+            id: this.comando.id,
+            imgUrl: this.comando.imgUrl
+        };
 
-      if (this.imagem) {
-        this.firebase.uploadImage(this.imagem, new_part)?.then(() =>{
-          this.router.navigate(['/itemlist'])
-        });
-      }else{
-        new_part.imgUrl = this.comando.imgUrl;
+        const navigateAndToastSuccess = () => {
+            this.router.navigate(['/itemlist']);
+            this.toast.success({
+                detail: "Sucesso!",
+                summary: "Atualização Concluída.",
+                duration: 5000
+            });
+        };
 
-        this.firebase.editar(new_part, this.comando.id).then(() => this.router.navigate(['/itemlist'])).catch((error) =>{
-          console.log(error);
+        if (this.imagem) {
+            this.firebase.uploadImage(this.imagem, new_part)
+                ?.then(navigateAndToastSuccess)
+                .catch((error) => {
+                    console.error('Error uploading image:', error);
+                    this.toast.error({
+                        detail: "Erro",
+                        summary: "Falha ao atualizar imagem.",
+                        duration: 5000
+                    });
+                });
+        } else {
+            new_part.imgUrl = this.comando.imgUrl;
+
+            this.firebase.editar(new_part, this.comando.id)
+                .then(navigateAndToastSuccess);
+        }
+    } else {
+        this.toast.error({
+            detail: "Erro",
+            summary: "Campos obrigatórios!",
+            duration: 5000
         });
-      }
-    }else{
-      window.alert('Campos obrigatorios!');
     }
   }
+
 
   uploadFile(event: any){
     this.imagem = event.target.files;
@@ -72,12 +98,27 @@ export class ItemeditComponent implements OnInit{
     return control && control.invalid && (control.dirty || control.touched);
   }
 
-  delete(){
+  delete() {
     const confirmDelete = window.confirm('Tem certeza de que deseja excluir este item?');
-    if(confirmDelete){
-      this.firebase.excluir(this.comando.id).then(() => {
-          this.router.navigate(['/itemlist']);
-        });
+    if (confirmDelete) {
+        this.firebase.excluir(this.comando.id)
+            .then(() => {
+                this.router.navigate(['/itemlist']);
+                this.toast.success({
+                    detail: "Sucesso!",
+                    summary: "Item excluído com sucesso.",
+                    duration: 5000
+                });
+            })
+            .catch((error) => {
+                console.error('Error deleting item:', error);
+                this.toast.error({
+                    detail: "Erro!",
+                    summary: "Falha ao excluir o item. Tente novamente mais tarde.",
+                    duration: 5000
+                });
+            });
     }
   }
+
 }

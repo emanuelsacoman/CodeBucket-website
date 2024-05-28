@@ -29,6 +29,7 @@ import { FooterComponent } from './view/footer/footer.component';
 import { CommandsComponent } from './view/commands/commands.component';
 import { ComandosEditComponent } from './view/screenManager/comandos-edit/comandos-edit.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgToastModule } from 'ng-angular-popup';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     AngularFireAuthModule,
     provideAuth(() => getAuth()),
+    NgToastModule,
     
 
   ],
