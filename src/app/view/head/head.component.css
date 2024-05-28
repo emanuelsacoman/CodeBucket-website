@@ -147,6 +147,11 @@ nav{
         align-items: center; 
         background-color: rgba(0, 0, 0, 0.308);
     }
+
+    .hamburguer img {
+        height: 3rem;
+        width: auto;
+    }
     
     .hamburguerNav ul {
         height: 30%;
