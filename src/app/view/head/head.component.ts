@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgToastService } from 'ng-angular-popup';
 import { Footer } from 'src/app/model/interfaces/footer';
 import { Home } from 'src/app/model/interfaces/home';
 import { Outro } from 'src/app/model/interfaces/outro';
@@ -21,7 +22,8 @@ export class HeadComponent {
 
   constructor(private router: Router,
     private firebaseService: FirebaseService,
-    private authService: AuthService){
+    private authService: AuthService,
+    private toast: NgToastService){
       this.firebaseService.obterTodosOutro().subscribe((res) => {
         this.outros = res.map((outro) => {
           return {
@@ -57,12 +59,29 @@ export class HeadComponent {
     return this.authService.isLoggedIn;
   }
 
-  logout(): void{
+  logout(): void {
     const confirmLogout = window.confirm('Tem certeza de que deseja deslogar?');
-    if(confirmLogout){
-      this.authService.deslogar();
+    if (confirmLogout) {
+        this.authService.deslogar()
+            .then(() => {
+                this.router.navigate(['/login']);
+                this.toast.success({
+                    detail: "Sucesso!",
+                    summary: "Desconectado com sucesso",
+                    duration: 5000
+                });
+            })
+            .catch((error) => {
+                console.error('Error logging out:', error);
+                this.toast.error({
+                    detail: "Erro",
+                    summary: "Falha ao desconectar.",
+                    duration: 5000
+                });
+            });
     }
   }
+
 
   openNav() : void {
     this.isNavOpen = true;
