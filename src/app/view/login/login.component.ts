@@ -3,7 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/model/services/auth.service';
 import { User } from 'src/app/model/interfaces/user';
-import { Title } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { NgToastService } from 'ng-angular-popup';
 
 @Component({
@@ -17,13 +17,16 @@ export class LoginComponent implements OnInit {
   loginError: string | null = null;
 
   title = 'CodeBucket | Login';
+  description = 'Página de Login do CodeBucket.';
   
   constructor(private router: Router,
     private formBuilder: FormBuilder,
     private authService: AuthService,
     private titleService: Title,
+    private metaService: Meta,
     private toast: NgToastService){
       this.setDocTitle(this.title)
+      this.setMetaDescription(this.description);
   }
   ngOnInit(): void {
     this.userForm = new FormGroup({
@@ -66,7 +69,11 @@ export class LoginComponent implements OnInit {
   setDocTitle(title: string) {
     console.log('current title:::::' + this.titleService.getTitle());
     this.titleService.setTitle(title);
- }
+  }
 
+  setMetaDescription(description: string) {
+    console.log('Updating meta description:::::', description);
+    this.metaService.updateTag({ name: 'description', content: description });
+  }
  
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { ComandosEdit } from 'src/app/model/interfaces/comandos';
 import { Command } from 'src/app/model/interfaces/command';
@@ -22,10 +22,12 @@ export class CommandsComponent {
   searchTerm: string = '';
 
   title = 'CodeBucket | Comandos';
+  description = 'Descubra todos os comando que CodeBucket apresenta.';
 
   constructor(private router: Router,
     private firebaseService: FirebaseService,
-    private titleService: Title){
+    private titleService: Title,
+    private metaService: Meta){
       this.firebaseService.obterTodos().subscribe((res) => {
         this.comandos = res.map((comando) => {
           return {
@@ -47,13 +49,19 @@ export class CommandsComponent {
         this.comandosLoaded2 = true;
       });
 
-      this.setDocTitle(this.title)
+      this.setDocTitle(this.title);
+      this.setMetaDescription(this.description);
     }
 
     setDocTitle(title: string) {
       console.log('current title:::::' + this.titleService.getTitle());
       this.titleService.setTitle(title);
-   }
+    }
+
+    setMetaDescription(description: string) {
+      console.log('Updating meta description:::::', description);
+      this.metaService.updateTag({ name: 'description', content: description });
+    }
 
     showDescription(command: Command){
       this.comandos.forEach(item => {
