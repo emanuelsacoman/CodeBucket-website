@@ -62,6 +62,6 @@ A banca recebeu uma documentação criada por mim, especificando detalhes do pro
 
 ### 🏆​ Resultado Final:
 
-Após a apresentação feita no dia 17/06/2024 às 21:00, foi declarado na faculdade UniGuairacá em Guarapuava que minha nota seria **100**.
+Após a defesa do projeto feita no dia 17/06/2024 às 21:00, foi declarado na faculdade UniGuairacá em Guarapuava que minha nota seria **100**, sendo assim, nota máxima.
 
 Não se esqueça de deixar uma ⭐ nesse repositório!
