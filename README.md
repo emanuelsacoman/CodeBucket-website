@@ -54,4 +54,14 @@ Investi meu tempo para melhorar os gráficos abaixo.
 
 ![PageSpeed](./src/assets/images/pagespeed2.png)
 
+### 📚​ Documentação: 
+
+A banca recebeu uma documentação criada por mim, especificando detalhes do projeto. Você pode acessar a esse conteúdo [clicando aqui!](https://poised-verdict-ecc.notion.site/3b7c6a83fc124b408440939e51a76922?v=2c86ee785fe74eafa0b625772b8b95f9)
+
+![Notion](./src/assets/images/notion.png)
+
+### 🏆​ Resultado Final:
+
+Após a apresentação feita no dia 17/06/2024 às 21:00, foi declarado na faculdade UniGuairacá em Guarapuava que minha nota seria **100**.
+
 Não se esqueça de deixar uma ⭐ nesse repositório!
