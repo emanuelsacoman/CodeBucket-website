@@ -12,6 +12,13 @@
             <span class="command fadeIn" (click)="goToCommands()" *ngFor="let foot of foots;">
                 {{foot.commandsRouter}}
             </span>
+            <ng-adsense
+                [adClient]="'ca-pub-7640562161899788'"
+                [adSlot]="7259870550"
+                [display]="'inline-block'"
+                [width]="100"
+                [height]="5"
+            ></ng-adsense>
         </div>
         <div class="algo dropdown" *ngIf="isLoggedIn()">
             <img class="dropbtn" src="assets/images/database.png" alt="Manager">
@@ -21,9 +28,11 @@
                 <span class="logout" (click)="logout()">Logout</span>
               </div>
         </div>
+        
         <div class="hamburguer fadeIn" *ngIf="outrosLoaded">
             <img src="./assets/images/menu.png" alt="menu" (click)="openNav()"/>
         </div>
+        
     </nav>
 
     <nav class="hamburguerNav fadeIn" *ngIf="isNavOpen" (click)="closeNav()">
