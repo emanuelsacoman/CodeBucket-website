@@ -129,7 +129,7 @@ body{
 .cooldown{
     font-size: clamp(12px, 3vw, 16px);
     background-color: #ffbc3c;
-    color: #fff;
+    color: #3D333A;
     text-wrap: nowrap;
     padding: 0.2rem;
     border-radius: 3px;
