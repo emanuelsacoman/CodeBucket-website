@@ -30,6 +30,7 @@ import { CommandsComponent } from './view/commands/commands.component';
 import { ComandosEditComponent } from './view/screenManager/comandos-edit/comandos-edit.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgToastModule } from 'ng-angular-popup';
+import { AdsenseModule } from 'ng2-adsense';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,10 @@ import { NgToastModule } from 'ng-angular-popup';
     AngularFireAuthModule,
     provideAuth(() => getAuth()),
     NgToastModule,
+    AdsenseModule.forRoot({
+      adClient: 'ca-pub-7640562161899788',
+      adSlot: 7259870550,
+    }),
     
 
   ],
