@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+body {
+    min-height: 80vh;
+    width: auto;
+    background-color: #403c44;
+    font-family: 'Cabin', sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    height: max-content;
+    width: auto;
+    margin: 1vh;
+    padding: 2vh;
+    font-size: clamp(1.1rem, 2vw, 1.5rem); 
+}
+
+h1{
+    font-size: clamp(2rem, 3vw, 2.5rem);
+}
+
+h2{
+    font-size: clamp(1.4rem, 3vw, 2rem); 
+}
+
+.text {
+    background-color: #403c44;
+    border-radius: 5px;
+    font-size: clamp(1rem, 1.8vw, 1.3rem); 
+    line-height: 1.8; 
+    letter-spacing: 0.5px; 
+    text-align: justify; 
+    color: #e0e0e0; 
+    word-spacing: 2px; 
+    text-indent: 1.5em;
+    margin-bottom: 1rem; 
+}

@@ -52,4 +52,11 @@ export class FooterComponent {
     goToCommands(){
       this.router.navigateByUrl("/comandos");
     }
+
+    goToPoliticas(){
+      this.router.navigateByUrl("/privacidade");
+    }
+    goToTermos(){
+      this.router.navigateByUrl("/servico");
+    }
 }

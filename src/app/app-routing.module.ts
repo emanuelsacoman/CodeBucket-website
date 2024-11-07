@@ -12,6 +12,8 @@ import { HomeEditComponent } from './view/screenManager/home-edit/home-edit.comp
 import { OutroEditComponent } from './view/screenManager/outro-edit/outro-edit.component';
 import { CommandsComponent } from './view/commands/commands.component';
 import { ComandosEditComponent } from './view/screenManager/comandos-edit/comandos-edit.component';
+import { PoliticaPrivacidadeComponent } from './view/politicas/politica-privacidade/politica-privacidade.component';
+import { TermosServicosComponent } from './view/politicas/termos-servicos/termos-servicos.component';
 
 const routes: Routes = [
   {
@@ -25,6 +27,14 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'privacidade',
+    component: PoliticaPrivacidadeComponent
+  },
+  {
+    path: 'servico',
+    component: TermosServicosComponent
   },
   {
     path: 'itemlist',

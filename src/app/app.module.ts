@@ -9,7 +9,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireStorageModule, } from '@angular/fire/compat/storage';
-import { environments } from 'src/environments/environments';
+import { environments } from 'src/environments/environment';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './view/login/login.component';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
@@ -31,6 +31,8 @@ import { ComandosEditComponent } from './view/screenManager/comandos-edit/comand
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgToastModule } from 'ng-angular-popup';
 import { AdsenseModule } from 'ng2-adsense';
+import { PoliticaPrivacidadeComponent } from './view/politicas/politica-privacidade/politica-privacidade.component';
+import { TermosServicosComponent } from './view/politicas/termos-servicos/termos-servicos.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { AdsenseModule } from 'ng2-adsense';
     OutroEditComponent,
     FooterComponent,
     CommandsComponent,
-    ComandosEditComponent
+    ComandosEditComponent,
+    PoliticaPrivacidadeComponent,
+    TermosServicosComponent
   ],
   imports: [
     BrowserAnimationsModule,

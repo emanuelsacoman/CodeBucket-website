@@ -15,16 +15,12 @@
                 </a>                    
             </div>
         </div>
-        <ng-adsense
-            [adClient]="'ca-pub-7640562161899788'"
-            [adSlot]="7259870550"
-            [display]="'inline-block'"
-            [width]="100"
-            [height]="5"
-        ></ng-adsense>
+        
         <div class="right fadeIn" *ngFor="let foot of foots;">
             <p (click)="goToHome()">{{foot.homeRouter}}</p>
             <p (click)="goToCommands()">{{foot.commandsRouter}}</p>
+            <p (click)="goToPoliticas()">Política de Privacidade</p>
+            <p (click)="goToTermos()">Termos de Serviço</p>
             <a class="topgg" href="https://top.gg/bot/1193011045577523300" target="_blank">
                 <img src="https://top.gg/api/widget/upvotes/1193011045577523300.svg" alt="upvotes counter">
             </a>

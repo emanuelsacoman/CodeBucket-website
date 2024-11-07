@@ -1,21 +1,10 @@
 {
   "hosting": {
-    "site": "codebucketweb",
-    "public": "dist/code-bucket",
+    "public": "dist/CodeBucket-website",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      },
-      {
-        "source": "/robots.txt",
-        "destination": "/robots.txt"
-      }
     ]
   }
 }
