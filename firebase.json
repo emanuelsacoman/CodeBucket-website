@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/CodeBucket-website",
+    "public": "dist/code-bucket",
     "ignore": [
       "firebase.json",
       "**/.*",
