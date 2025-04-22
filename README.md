@@ -64,4 +64,6 @@ A banca recebeu uma documentação criada por mim, especificando detalhes do pro
 
 Após a defesa do projeto feita no dia 17/06/2024 às 21:00, foi declarado na faculdade UniGuairacá em Guarapuava que minha nota seria **100**, sendo assim, nota máxima.
 
+![CodebucketWallpaper](./src/assets/images/codebucketWallpaper.png)
+
 Não se esqueça de deixar uma ⭐ nesse repositório!
