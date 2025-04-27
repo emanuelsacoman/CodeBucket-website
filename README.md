@@ -60,6 +60,16 @@ A banca recebeu uma documentação criada por mim, especificando detalhes do pro
 
 ![Notion](./src/assets/images/notion.png)
 
+### 📝 Artigo:
+
+Para complementar o projeto, escrevi um artigo detalhado sobre o desenvolvimento do CodeBucket. No artigo, compartilho todo o processo de criação do bot e do site de apoio, ambos desenvolvidos como parte do meu Trabalho de Conclusão de Curso (TCC) em Análise e Desenvolvimento de Sistemas.
+
+O artigo está dividido em tópicos que contam desde a origem da ideia, passando pela arquitetura do projeto até as funcionalidades principais que o bot oferece. Também explico o processo de tornar o projeto open-source, o roteiro de melhorias futuras (roadmap) e relato como foi a defesa do TCC.
+
+Além disso, o artigo traz detalhes dos feedbacks recebidos, o impacto que o projeto causou na banca avaliadora e uma reflexão final sobre a trajetória de desenvolvimento.
+
+Você pode acessar o artigo completo [clicando aqui!](https://medium.com/@emanuelsacoman/codebucket-bot-para-discord-que-ensina-programação-de-forma-prática-5f307730e5c2)
+
 ### 🏆​ Resultado Final:
 
 Após a defesa do projeto feita no dia 17/06/2024 às 21:00, foi declarado na faculdade UniGuairacá em Guarapuava que minha nota seria **100**, sendo assim, nota máxima.
